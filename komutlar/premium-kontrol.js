@@ -24,7 +24,7 @@ module.exports = {
       const PremiumAktif = new EmbedBuilder()
          .setColor("Green")
          .setTitle("Premium bulunuyor")
-         .setDescription(`<:Tik:1046504590775947274> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** ${moment.duration(db.fetch(`Premium_${interaction.user.id}`).Bitiş - Date.now()).format('w [hafta] d [gün] h [saat] m [dakika] s [saniye]')}`)
+         .setDescription(`<:Tik:1117512041419251752> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** ${moment.duration(db.fetch(`Premium_${interaction.user.id}`).Bitiş - Date.now()).format('w [hafta] d [gün] h [saat] m [dakika] s [saniye]')}`)
         
       interaction.reply({embeds: [PremiumAktif]}) 
       
@@ -33,7 +33,7 @@ module.exports = {
         const PremiumVar = new EmbedBuilder()
          .setColor("Green")
          .setTitle("Premium bulunuyor")
-         .setDescription(`<:Tik:1046504590775947274> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** Süresiz`)
+         .setDescription(`<:Tik:1117512041419251752> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** Süresiz`)
         
         interaction.reply({embeds: [PremiumVar]})
         
@@ -41,14 +41,14 @@ module.exports = {
       } else {
       
        const Destek = new ActionRowBuilder().addComponents(new ButtonBuilder()        
-        .setURL(`https://discord.gg/XjBRvvaUzM`)
+        .setURL(`https://discord.gg/RT62RZssJm`)
         .setLabel("Destek sunucusu")
         .setStyle("Link"))
       
       const PremiumDeaktif = new EmbedBuilder()
          .setColor("Red")
          .setTitle("Premium bulunmuyor")
-         .setDescription(`<:Carpi:1046504575277998130> **Premium üyeliğiniz bulunmamaktadır, Premium üyelik almak için destek sunucusuna gelebilirsiniz.**`)
+         .setDescription(`<:Carpi:1117512106833612883> **Premium üyeliğiniz bulunmamaktadır, Premium üyelik almak için destek sunucusuna gelebilirsiniz.**`)
         
       interaction.reply({embeds: [PremiumDeaktif], components: [Destek]}) 
       
