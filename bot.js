@@ -75,7 +75,7 @@ const LinkEkleFormu = new TextInputBuilder()
     .setStyle(TextInputStyle.Paragraph)
     .setMinLength(20)
     .setMaxLength(100)
-    .setPlaceholder('https://proje-linki.glitch.me')
+    .setPlaceholder('https://erasty-uptime.glitch.me')
     .setRequired(true)
 const LinkEklemeSistemi = new ActionRowBuilder().addComponents(LinkEkleFormu);
 LinkEklemeFormu.addComponents(LinkEklemeSistemi);
@@ -91,7 +91,7 @@ const LinkSilFormu = new TextInputBuilder()
     .setStyle(TextInputStyle.Paragraph)
     .setMinLength(20)
     .setMaxLength(100)
-    .setPlaceholder('https://proje-linki.glitch.me')
+    .setPlaceholder('https://erasty-uptime.glitch.me')
     .setRequired(true)
 const LinkSilmeSistemi = new ActionRowBuilder().addComponents(LinkSilFormu);
 LinkSilmeFormu.addComponents(LinkSilmeSistemi); 

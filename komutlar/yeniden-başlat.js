@@ -13,7 +13,7 @@ module.exports = {
     async execute(client, interaction) {   
       
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:no:1117512106833612883> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1117512106833612883> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
         
@@ -22,9 +22,8 @@ module.exports = {
 }
     
       const Başlatıldı = new EmbedBuilder()
-         .setDescription(`**Bot yeniden başlatılıyor.**`)
+         .setDescription(`<:yes:1122994864049619127> **Bot yeniden başlatılıyor.**`)
          .setColor('Green')
-         .setTitle('Başarılı')
          
       interaction.reply({embeds: [Başlatıldı]})
         
