@@ -16,7 +16,6 @@ module.exports = {
     async execute(client, interaction) {   
       
       let a = client.users.cache.get('1112637700604960880').tag
-      let b = client.users.cache.get('788717157919096854').tag
 
    
       
@@ -40,8 +39,7 @@ module.exports = {
       .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
       .addFields({
           name: "<:icons_owner:1122979036445016064> | Geliştiriciler",
-          value: `> **[Erasty](https://discord.com/users/1112637700604960880)**
-                  > **[İlkay](https://discord.com/users/788717157919096854)**`,
+          value: `> **[Erasty](https://discord.com/users/1112637700604960880)**`,
           inline: true
         },
         {
@@ -123,8 +121,7 @@ module.exports = {
       .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
       .addFields({
           name: "<:icons_owner:1122979036445016064> Bot geliştiricileri",
-        value: `> **[Erasty](https://discord.com/users/1112637700604960880)**
-                > **[İlkay](https://discord.com/users/788717157919096854)**`,
+        value: `> **[Erasty](https://discord.com/users/1112637700604960880)**`,
           inline: true
         },
         {

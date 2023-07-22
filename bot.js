@@ -168,7 +168,7 @@ client.on('interactionCreate', async interaction => {
         if(!PremiumVarmı) {
         PreVarmı = "<:Carpi:1122993152064765973>"
         } else {
-        PreVarmı = "<:Tik:1122994864049619127>"
+        PreVarmı = "<:t:1122994864049619127>"
         }
       
       
