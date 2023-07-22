@@ -17,52 +17,52 @@ client.login(process.env.token)
 const PreYok = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1117512106833612883> **Normal bir kullanıcı en fazla 2 proje ekleyebilir, </link-limit:0> komutu ile link limitinizi arttırabilir, </pre-al:0> komutu ile premium alarak sınırsız link ekleyebilirsiniz.**`)
+    .setDescription(`<:carpi:1122993152064765973> **Normal bir kullanıcı en fazla 2 proje ekleyebilir, </link-limit:0> komutu ile link limitinizi arttırabilir, </pre-al:0> komutu ile premium alarak sınırsız link ekleyebilirsiniz.**`)
     
 const FazlaLink = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1117512106833612883> **Bir kullanıcı tarafından en fazla 999 link eklenebilir.**`)
+    .setDescription(`<:no:1122993152064765973> **Bir kullanıcı tarafından en fazla 999 link eklenebilir.**`)
    
 const LinkVar = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1117512106833612883> **Belirtilen proje sistemde bulunuyor.**`)
+    .setDescription(`<:no:1122993152064765973> **Belirtilen proje sistemde bulunuyor.**`)
     
 const BaşıHatalı = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1117512106833612883> **Proje linkin hatalı, linkin başında \`https://\` olduğundan emin ol.**`)
+    .setDescription(`<:no:1122993152064765973> **Proje linkin hatalı, linkin başında \`https://\` olduğundan emin ol.**`)
     
 const SonuHatalı = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1117512106833612883> **Yalnızca glitch projeleri aktif tutulmaktdır, linkin sonunda \`.glitch.me\` olduğundan emin ol.**`)
+    .setDescription(`<:no:1122993152064765973> **Yalnızca glitch projeleri aktif tutulmaktdır, linkin sonunda \`.glitch.me\` olduğundan emin ol.**`)
     
 const LinkEklendi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:Tik:1117512041419251752> **Projen başarıyla sisteme eklendi, linkiniz 2-5 dk içerisinde aktif olacaktır.**`)
+    .setDescription(`<:yes:1122994864049619127> **Projen başarıyla sisteme eklendi, linkiniz 2-5 dk içerisinde aktif olacaktır.**`)
         
 const ProjeYok = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1117512106833612883> **Sistemde böyle bir proje bulunmuyor.**`)
+    .setDescription(`<:no:1122993152064765973> **Sistemde böyle bir proje bulunmuyor.**`)
     
 const LinkSilindi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:Tik:1117512041419251752> **Projen başarıyla sistemden silindi.**`)
+    .setDescription(`<:yes:1122994864049619127> **Projen başarıyla sistemden silindi.**`)
     
 const Silindi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:Tik:1117512041419251752> **Proje başarıyla sistemden silindi.**`)
+    .setDescription(`<:yes:1122994864049619127> **Proje başarıyla sistemden silindi.**`)
     
 const ProjeEklenmemiş = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1117512106833612883>  **Sisteme hiç proje eklememişsin.**`)
+    .setDescription(`<:no:1122993152064765973>  **Sisteme hiç proje eklememişsin.**`)
 //=====// Embedler \\=====\\
 
 //=====// LinkEklemeFormu \\=====\\
@@ -137,7 +137,7 @@ client.on('interactionCreate', async interaction => {
   if (interaction.commandName === "sil") {
     
     const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:Carpi:1117512106833612883> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:no:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
         
@@ -166,9 +166,9 @@ client.on('interactionCreate', async interaction => {
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:Carpi:1122993152064765973>"
+        PreVarmı = "<:no:1122993152064765973>"
         } else {
-        PreVarmı = "<:t:1122994864049619127>"
+        PreVarmı = "<:yes:1122994864049619127>"
         }
       
       
@@ -298,9 +298,9 @@ client.on('interactionCreate', async interaction => {
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:Carpi:1122993152064765973>"
+        PreVarmı = "<:no:1122993152064765973>"
         } else {
-        PreVarmı = "<:Tik:1122994864049619127>"
+        PreVarmı = "<:yes:1122994864049619127>"
         }
         
       const ProjeEklendi = new EmbedBuilder()
@@ -376,16 +376,16 @@ client.on('interactionCreate', async interaction => {
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:Carpi:1122993152064765973>"
+        PreVarmı = "<:no:1122993152064765973>"
         } else {
-        PreVarmı = "<:Tik:1122994864049619127>"
+        PreVarmı = "<:yes:1122994864049619127>"
         }
       const ProjeSilindi = new EmbedBuilder()
          .setColor("Red")
          .setTitle("Sistemden bir link silindi")
          .addFields({name: `<:Kullanici:1122992989325766748> **Kullanıcı adı**`, value: `<@${interaction.user.id}>`})
-         .addFields({name: `<:Isim:1122979100689174661> **Kullanıcı tagı**`, value: `${interaction.user.tag}`})
-         .addFields({name: `<:Id:1122977905727778846> **Kullanıcı id**`, value: `${interaction.user.id}`})
+         .addFields({name: `<:İsim:1122979100689174661> **Kullanıcı tagı**`, value: `${interaction.user.tag}`})
+         .addFields({name: `<:İd:1122977905727778846> **Kullanıcı id**`, value: `${interaction.user.id}`})
          .addFields({name: `<:Belge:1122988494680232077> **Sistemdeki link sayısı**`, value: `${db.fetch(`UptimeLink`).length}`})
          .addFields({name: `<:Link:1122988494680232077> **Kullanıcının link sayısı**`, value: `${db.fetch(`UptimeLink_${interaction.user.id}`).length}`})
          .addFields({name: `<:Premium:1122993100332204146> **Kullanıcının premiumu bulunuyormu**`, value: `${PreVarmı}`})
@@ -402,11 +402,11 @@ client.on('interactionCreate', async interaction => {
     const Kullanamazsın = new EmbedBuilder()
            .setColor("Red")
            .setTitle("Komutlarımı kullanamazsın")
-           .setDescription(`<:Yasak:1047203094380945458> **Karalistemde bulunduğun için komutlarımı kullanmazsın, karalisteye alınma sebebini öğrenmek için veya karalisteden çıkartılmak için destek sunucuma gelebilirsin.**`)
+           .setDescription(`<:No:1122993152064765973> **Karalistemde bulunduğun için komutlarımı kullanmazsın, karalisteye alınma sebebini öğrenmek için veya karalisteden çıkartılmak için destek sunucuma gelebilirsin.**`)
         
         const Destek = new ActionRowBuilder().addComponents(new ButtonBuilder()        
            .setURL(`https://discord.gg/RT62RZssJm`)
-           .setLabel("Destek sunucusu")
+           .setLabel("Destek Sunucusu")
            .setStyle("Link"))
          
     if (db.fetch(`Karaliste_${interaction.user.id}`)) return interaction.reply({embeds: [Kullanamazsın], components: [Destek], ephemeral: true})
@@ -416,7 +416,7 @@ client.on('interactionCreate', async interaction => {
           const Bakımda = new EmbedBuilder()
            .setColor("Red")
            .setTitle("Bot bakımda")
-           .setDescription(`<:Bakim:1070693677619478669> **Sizlere en iyi hizmeti vermek için kısa süreliğine bakımdayız. Daha ayrıntılı bilgi için destek sunucusuna gelebilirsiniz. Bakım sebebi: \`${db.fetch(`BakımSebep`)}\`**`)
+           .setDescription(`<:Bakım:1070693677619478669> **Sizlere en iyi hizmeti vermek için kısa süreliğine bakımdayız. Daha ayrıntılı bilgi için destek sunucusuna gelebilirsiniz. Bakım sebebi: \`${db.fetch(`BakımSebep`)}\`**`)
         
           const Destek = new ActionRowBuilder().addComponents(new ButtonBuilder()        
            .setURL(`https://discord.gg/RT62RZssJm`)
@@ -433,7 +433,7 @@ client.on('interactionCreate', async interaction => {
     const LinkYok = db.get(`UptimeLink_${interaction.user.id}`)
  			if (!LinkYok) return interaction.reply({embeds: [ProjeEklenmemiş], ephemeral: true})
         
-        const links = db.get(`UptimeLink_${interaction.user.id}`).map(map => `<:Link:1113173952664174696> **Link:** ${map}`).join("\n")
+        const links = db.get(`UptimeLink_${interaction.user.id}`).map(map => `<:Link:1046776084965900308> **Link:** ${map}`).join("\n")
 
         const LinkListe = new EmbedBuilder()
             .setTitle(`Sistemdeki projelerin`)
@@ -465,30 +465,3 @@ setInterval(() => {
 }, 120000);
 //=====// UptimeEtme \\=====\\
 
-
-//=====// Seste Tutma \\=====\\
-const { joinVoiceChannel } = require('@discordjs/voice')
-client.on('ready', () => {
-  let channel = client.channels.cache.get("1112801002404466799")
- 
-
-      const VoiceConnection = joinVoiceChannel({
-          channelId: channel.id,
-          guildId: channel.guild.id,
-          adapterCreator: channel.guild.voiceAdapterCreator
-  });
-})
-//=====// Seste Tutma \\=====\\
-//YARDIM
-
-client.on("interactionCreate", async interaction => {
-  if (!interaction.isButton()) return;
-  let message = await interaction.channel.messages.fetch(interaction.message.id)  
-  if(interaction.customId == "komutbuton") {
-const embed = new Discord.EmbedBuilder()
-.setTitle("Erasty Uptime | Genel Komutlar")
-.setDescription("/istatistik **Botun İstatistiğini gösterir.**\n /ping **Botun gecikme sürelerini gösterir.**\n /davet **Botun bağlantılarını gösterir.**")
-.setColor("Random")
-interaction.reply({embeds: [embed], components: [], ephemeral: true})
-  }
-})
