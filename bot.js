@@ -465,3 +465,17 @@ setInterval(() => {
 }, 120000);
 //=====// UptimeEtme \\=====\\
 
+//=====// Seste Tutma \\=====\\
+const { joinVoiceChannel } = require('@discordjs/voice')
+client.on('ready', () => {
+  let channel = client.channels.cache.get("1112801002404466799")
+ 
+
+      const VoiceConnection = joinVoiceChannel({
+          channelId: channel.id,
+          guildId: channel.guild.id,
+          adapterCreator: channel.guild.voiceAdapterCreator
+  });
+})
+//=====// Seste Tutma \\=====\\
+
