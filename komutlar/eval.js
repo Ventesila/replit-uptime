@@ -20,7 +20,7 @@ module.exports = {
     async execute(client, interaction) {   
       
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:no:1117512106833612883> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
       
@@ -35,7 +35,7 @@ module.exports = {
       if (evaled.match(new RegExp(`${client.token}`, "g")));
          
          const Token = new EmbedBuilder()
-          .setDescription(`<:no:1117512106833612883> **Bu şekilde tokenimi alamazsın.**`)
+          .setDescription(`<:No:1122993152064765973> **Bu şekilde tokenimi alamazsın.**`)
           .setColor('Red')
           .setTitle("Hata")
          

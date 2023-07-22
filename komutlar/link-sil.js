@@ -16,12 +16,12 @@ module.exports = {
 const ProjeYok = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:no:1117512106833612883> **Sistemde böyle bir proje bulunmuyor.**`)
+    .setDescription(`<:No:1122993152064765973> **Sistemde böyle bir proje bulunmuyor.**`)
     
 const LinkSilindi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:yes:1117512041419251752> **Projen başarıyla sistemden silindi.**`)
+    .setDescription(`<:Yes:1122994864049619127> **Projen başarıyla sistemden silindi.**`)
     
 const LinkSilmeFormu = new ModalBuilder()
     .setCustomId('linksilmeform')
@@ -32,7 +32,7 @@ const LinkSilFormu = new TextInputBuilder()
     .setStyle(TextInputStyle.Paragraph)
     .setMinLength(20)
     .setMaxLength(100)
-    .setPlaceholder('https://proje-linki.glitch.me')
+    .setPlaceholder('https://erasty-uptime.glitch.me')
     .setRequired(true)
 const LinkSilmeSistemi = new ActionRowBuilder().addComponents(LinkSilFormu);
 LinkSilmeFormu.addComponents(LinkSilmeSistemi);
@@ -65,9 +65,9 @@ LinkSilmeFormu.addComponents(LinkSilmeSistemi);
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:no:1122993152064765973>"
+        PreVarmı = "<:No:1122993152064765973>"
         } else {
-        PreVarmı = "<:yes:1122994864049619127>"
+        PreVarmı = "<:Yes:1122994864049619127>"
         }
   
         const ProjeSilindi = new EmbedBuilder()

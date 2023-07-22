@@ -24,7 +24,7 @@ module.exports = {
       .setColor('Red')
       .setTitle("Hata")
       
-    if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "788717157919096854" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
+    if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
     return interaction.reply({embeds: [YetkiYok]});
 }
       

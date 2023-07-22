@@ -24,16 +24,16 @@ module.exports = {
     async execute(client, interaction) {   
      
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:no:1117512106833612883> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
         
       const KaralisteAlınamaz = new EmbedBuilder()
-        .setDescription(`<:no:1117512106833612883> **Bot sahipleri bu komutdan etkilenmez.**`)
+        .setDescription(`<:No:1122993152064765973> **Bot sahipleri bu komutdan etkilenmez.**`)
         .setColor('Red')
         .setTitle("Hata")
       
-      if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "788717157919096854" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
+      if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
       return interaction.reply({embeds: [YetkiYok]});
 }
       const kullanıcı = interaction.options.getUser('kullanıcı');
@@ -41,7 +41,7 @@ module.exports = {
       const Karaliste = db.fetch(`Karaliste_${kullanıcı.id}`)
       
       const KaralisteEklendi = new EmbedBuilder()
-      .setDescription(`<:yes:1117512041419251752> ${kullanıcı} **adlı kullanıcı karalisteye eklendi, artık botu kullanamayacak.**`)
+      .setDescription(`<:Yes:1122994864049619127> ${kullanıcı} **adlı kullanıcı karalisteye eklendi, artık botu kullanamayacak.**`)
       .setColor('Green')
       .setTitle("Başarılı")
       
@@ -69,7 +69,7 @@ module.exports = {
       } else {
   
       const KaralistedeVar = new EmbedBuilder()
-      .setDescription(`:x: ${kullanıcı} **adlı kullanıcı zaten karalistede bulunuyor.**`)
+      .setDescription(`<:No:1122993152064765973> ${kullanıcı} **adlı kullanıcı zaten karalistede bulunuyor.**`)
       .setColor('Red')
       .setTitle("Hata")
       
