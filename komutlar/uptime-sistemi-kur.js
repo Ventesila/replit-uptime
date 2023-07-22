@@ -34,23 +34,23 @@ module.exports = {
              .setColor("Blue")
              .setImage("https://cdn.discordapp.com/attachments/1125828373395017920/1125828419523989627/Adsz.png")
              .setDescription("**Uptime Sistemi | Uptime System** \n")
-.addFields({name: "<:Tr:1126168752992550963>", value: "<:icons_book:1125829375699456201> | Gizlilik ve Güvenlik politikamızı destek sunucumuzdan görebilirsin! \n <:Ekle:1132419170596831232> | Link eklemek için: **Ekle | Add** \n <:coloricon_red:1125829108476166174> | Linkinizi silmek için: **Sil | Delete** \n <:koyumavi:1125829196464259123> | Linklerinizi görmek için: **Liste | List** \n <:help:1125828828040806471> | Aradığınızı bulamadıysanız veya öneriniz varsa sizi destek sunucumuza bekleriz. \n "}, {name: "<:Us:1126168782130380891>", value: "<:icons_book:1125829375699456201> | You can view our Privacy and Security policy on our support server! \n <:dcoloricon_green:1125829143767040061> | To add link: **Ekle | Add** \n <:coloricon_red:1125829108476166174> | To remove your links: **Sil | Delete** \n <:koyumavi:1125829196464259123> | To see your links: **Liste | List** \n <:help:1125828828040806471> | If you didn't find what you were looking for or if you have a suggestion, we welcome you to our support server."})
+.addFields({name: "<:Tr:1126168752992550963>", value: "<:Poltika:1132425331589009419> | Gizlilik ve Güvenlik politikamızı destek sunucumuzdan görebilirsin! \n <:Ekle:1132419170596831232> | Link eklemek için: **Ekle | Add** \n <:Sil:1132424813705711747> | Linkinizi silmek için: **Sil | Delete** \n <:Liste:1132425047731085333> | Linklerinizi görmek için: **Liste | List** \n <:help:1125828828040806471> | Aradığınızı bulamadıysanız veya öneriniz varsa sizi destek sunucumuza bekleriz. \n "}, {name: "<:Us:1126168782130380891>", value: "<:Poltika:1132425331589009419> | You can view our Privacy and Security policy on our support server! \n <:dcoloricon_green:1125829143767040061> | To add link: **Ekle | Add** \n <:coloricon_red:1125829108476166174> | To remove your links: **Sil | Delete** \n <:Liste:1132425047731085333> | To see your links: **Liste | List** \n <:help:1125828828040806471> | If you didn't find what you were looking for or if you have a suggestion, we welcome you to our support server."})
         
         .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
      
         const Butonlar = new ActionRowBuilder() 
            .addComponents(new Discord.ButtonBuilder()
-           .setEmoji("<:dcoloricon_green:1125829143767040061>")
+           .setEmoji("<:Ekle:1132419170596831232>")
            .setLabel("Ekle")
            .setStyle(ButtonStyle.Success)
            .setCustomId("eklebuton"),
           new Discord.ButtonBuilder()
-           .setEmoji("<:coloricon_red:1125829108476166174>")
+           .setEmoji("<:Sil:1132424813705711747>")
            .setLabel("Sil")
            .setStyle(ButtonStyle.Danger)
            .setCustomId("silbuton"),
            new Discord.ButtonBuilder()
-           .setEmoji("<:koyumavi:1125829196464259123>")
+           .setEmoji("<:Liste:1132425047731085333>")
            .setLabel("Liste")
            .setStyle(ButtonStyle.Primary)
            .setCustomId("listebuton"),
@@ -67,8 +67,8 @@ module.exports = {
            
         const SistemAçık = new EmbedBuilder()
          .setColor("Red")
-         .setTitle("<:reddet:1121426474856087632> | İşlem Başarısız.")
-         .setDescription(`<:reddet:1121426474856087632> | Uptime sistemi zaten kurulu. Sıfırlamak için: **/uptime-sıfırla**`)
+         .setTitle("<:No:1121426474856087632> | İşlem Başarısız.")
+         .setDescription(`<:No:1121426474856087632> | Uptime sistemi zaten kurulu. Sıfırlamak için: **/uptime-sıfırla**`)
       
         interaction.reply({embeds: [SistemAçık]})
         
