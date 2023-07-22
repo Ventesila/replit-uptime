@@ -20,7 +20,7 @@ module.exports = {
     async execute(client, interaction) {   
       
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:no:1117512106833612883> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
       
@@ -36,7 +36,7 @@ module.exports = {
       if(Bakım) {
         
       const BakımAçık = new EmbedBuilder()
-      .setDescription(`<:no:1117512106833612883>> **Bot zaten \`${Sebep}\` sebebi ile bakımda.**`)
+      .setDescription(`<:No:1122993152064765973> **Bot zaten \`${Sebep}\` sebebi ile bakımda.**`)
       .setColor('Red')
       .setTitle("Hata")
       interaction.reply({embeds: [BakımAçık]})
@@ -47,7 +47,7 @@ module.exports = {
       db.set(`BakımSebep`, sebep)
         
       const BakımAçıldı = new EmbedBuilder()
-      .setDescription(`<:yes:1117512041419251752> **Bot \`${sebep}\` sebebi ile bakıma alındı.**`)
+      .setDescription(`<:Yes:1122994864049619127> **Bot \`${sebep}\` sebebi ile bakıma alındı.**`)
       .setColor('Green')
       .setTitle("Başarılı")
       interaction.reply({embeds: [BakımAçıldı]})
