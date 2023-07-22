@@ -7,13 +7,13 @@ module.exports = {
 
     data: new SlashCommandBuilder()         
     .setName('yeniden-başlat')
-    .setDescription('Bot sahibi özel komutu.')
+    .setDescription('<:No:1122993152064765973> Bu komutu sadece <@1112637700604960880> kullanabilir')
     .setDMPermission(false),
               
     async execute(client, interaction) {   
       
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:No:1117512106833612883> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
         
@@ -22,7 +22,7 @@ module.exports = {
 }
     
       const Başlatıldı = new EmbedBuilder()
-         .setDescription(`<:yes:1122994864049619127> **Bot yeniden başlatılıyor.**`)
+         .setDescription(`<:Yes:1122994864049619127> **Bot yeniden başlatılıyor.**`)
          .setColor('Green')
          
       interaction.reply({embeds: [Başlatıldı]})

@@ -17,52 +17,52 @@ client.login(process.env.token)
 const PreYok = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:carpi:1122993152064765973> **Normal bir kullanıcı en fazla 2 proje ekleyebilir, </link-limit:0> komutu ile link limitinizi arttırabilir, </pre-al:0> komutu ile premium alarak sınırsız link ekleyebilirsiniz.**`)
+    .setDescription(`<:No:1122993152064765973>> **Normal bir kullanıcı en fazla 2 proje ekleyebilir, </link-limit:0> komutu ile link limitinizi arttırabilir, </pre-al:0> komutu ile premium alarak sınırsız link ekleyebilirsiniz.**`)
     
 const FazlaLink = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:no:1122993152064765973> **Bir kullanıcı tarafından en fazla 999 link eklenebilir.**`)
+    .setDescription(`<:No:1122993152064765973> **Bir kullanıcı tarafından en fazla 999 link eklenebilir.**`)
    
 const LinkVar = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:no:1122993152064765973> **Belirtilen proje sistemde bulunuyor.**`)
+    .setDescription(`<:No:1122993152064765973> **Belirtilen proje sistemde bulunuyor.**`)
     
 const BaşıHatalı = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:no:1122993152064765973> **Proje linkin hatalı, linkin başında \`https://\` olduğundan emin ol.**`)
+    .setDescription(`<:No:1122993152064765973> **Proje linkin hatalı, linkin başında \`https://\` olduğundan emin ol.**`)
     
 const SonuHatalı = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:no:1122993152064765973> **Yalnızca glitch projeleri aktif tutulmaktdır, linkin sonunda \`.glitch.me\` olduğundan emin ol.**`)
+    .setDescription(`<:No:1122993152064765973> **Yalnızca glitch projeleri aktif tutulmaktdır, linkin sonunda \`.glitch.me\` olduğundan emin ol.**`)
     
 const LinkEklendi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:yes:1122994864049619127> **Projen başarıyla sisteme eklendi, linkiniz 2-5 dk içerisinde aktif olacaktır.**`)
+    .setDescription(`<:Yes:1122994864049619127> **Projen başarıyla sisteme eklendi, linkiniz 2-5 dk içerisinde aktif olacaktır.**`)
         
 const ProjeYok = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:no:1122993152064765973> **Sistemde böyle bir proje bulunmuyor.**`)
+    .setDescription(`<:No:1122993152064765973> **Sistemde böyle bir proje bulunmuyor.**`)
     
 const LinkSilindi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:yes:1122994864049619127> **Projen başarıyla sistemden silindi.**`)
+    .setDescription(`<:Yes:1122994864049619127> **Projen başarıyla sistemden silindi.**`)
     
 const Silindi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:yes:1122994864049619127> **Proje başarıyla sistemden silindi.**`)
+    .setDescription(`<:Yes:1122994864049619127> **Proje başarıyla sistemden silindi.**`)
     
 const ProjeEklenmemiş = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:no:1122993152064765973>  **Sisteme hiç proje eklememişsin.**`)
+    .setDescription(`<:No:1122993152064765973>  **Sisteme hiç proje eklememişsin.**`)
 //=====// Embedler \\=====\\
 
 //=====// LinkEklemeFormu \\=====\\
@@ -137,7 +137,7 @@ client.on('interactionCreate', async interaction => {
   if (interaction.commandName === "sil") {
     
     const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:no:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
         
@@ -166,9 +166,9 @@ client.on('interactionCreate', async interaction => {
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:no:1122993152064765973>"
+        PreVarmı = "<:No:1122993152064765973>"
         } else {
-        PreVarmı = "<:yes:1122994864049619127>"
+        PreVarmı = "<:Yes:1122994864049619127>"
         }
       
       
@@ -298,9 +298,9 @@ client.on('interactionCreate', async interaction => {
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:no:1122993152064765973>"
+        PreVarmı = "<:No:1122993152064765973>"
         } else {
-        PreVarmı = "<:yes:1122994864049619127>"
+        PreVarmı = "<:Yes:1122994864049619127>"
         }
         
       const ProjeEklendi = new EmbedBuilder()
@@ -376,9 +376,9 @@ client.on('interactionCreate', async interaction => {
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:no:1122993152064765973>"
+        PreVarmı = "<:No:1122993152064765973>"
         } else {
-        PreVarmı = "<:yes:1122994864049619127>"
+        PreVarmı = "<:Yes:1122994864049619127>"
         }
       const ProjeSilindi = new EmbedBuilder()
          .setColor("Red")
