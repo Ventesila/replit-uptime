@@ -19,7 +19,7 @@ module.exports = {
     async execute(client, interaction) {   
       
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:Carpi:1117512106833612883> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
         
@@ -33,12 +33,12 @@ module.exports = {
       const PremiumAlındı = new EmbedBuilder()
          .setColor("Green")
          .setTitle("Başarılı")
-         .setDescription(`<:Tik:1117512041419251752> ${kullanıcı} **adlı kullanıcının premiumu alındı.**`)
+         .setDescription(`<:Yes:1122994864049619127> ${kullanıcı} **adlı kullanıcının premiumu alındı.**`)
         
       const PremiumYok = new EmbedBuilder()
          .setColor("Red")
          .setTitle("Hata")
-         .setDescription(`<:Carpi:1117512106833612883> ${kullanıcı} **adlı kullanıcının zaten premium üyeliği bulunmuyor.**`)
+         .setDescription(`<:No:1122993152064765973> ${kullanıcı} **adlı kullanıcının zaten premium üyeliği bulunmuyor.**`)
         
       const PremiumGitti = new EmbedBuilder()
          .setColor("Red")

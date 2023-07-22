@@ -27,7 +27,7 @@ module.exports = {
     async execute(client, interaction) {   
       
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:no:1117512106833612883> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
         
@@ -43,7 +43,7 @@ module.exports = {
       const PremiumVar = new EmbedBuilder()
          .setColor("Red")
          .setTitle("Hata")
-         .setDescription(`<:no:1117512106833612883> ${kullanıcı} **adlı kullanıcının zaten premium üyeliği bulunuyor.**`)
+         .setDescription(`<:No:1122993152064765973> ${kullanıcı} **adlı kullanıcının zaten premium üyeliği bulunuyor.**`)
         
       if(!PremiumÜye) {
       
@@ -55,7 +55,7 @@ module.exports = {
       const PremiumEklendi = new EmbedBuilder()
          .setColor("Green")
          .setTitle ("Başarılı")
-         .setDescription(`<:yes:991040862886719598> ${kullanıcı} **adlı kullanıcıya premium verildi. Bitiş tarihi:** ${moment(PremiumBitiş).format('DD.MM.YYYY - HH:mm:ss')}`)
+         .setDescription(`<:Yes:1122994864049619127> ${kullanıcı} **adlı kullanıcıya premium verildi. Bitiş tarihi:** ${moment(PremiumBitiş).format('DD.MM.YYYY - HH:mm:ss')}`)
         
       interaction.reply({embeds: [PremiumEklendi]})
       

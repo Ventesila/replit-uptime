@@ -67,8 +67,8 @@ module.exports = {
            
         const SistemAçık = new EmbedBuilder()
          .setColor("Red")
-         .setTitle("<:No:1121426474856087632> | İşlem Başarısız.")
-         .setDescription(`<:No:1121426474856087632> | Uptime sistemi zaten kurulu. Sıfırlamak için: **/uptime-sıfırla**`)
+         .setTitle("<:No:1121426474856087632> İşlem Başarısız.")
+         .setDescription(`<:No:1121426474856087632> Uptime sistemi zaten kurulu. Sıfırlamak için: ``/uptime-sıfırla**`` `)
       
         interaction.reply({embeds: [SistemAçık]})
         

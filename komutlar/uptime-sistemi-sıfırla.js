@@ -21,7 +21,7 @@ module.exports = {
         const SistemKapalı = new EmbedBuilder()
          .setColor("Red")
          .setTitle("Hata")
-         .setDescription(`<:no:1117512106833612883> **Sistem zaten kapalı. Ayarlamak için: </uptime-sistemi-kur:0>**`)
+         .setDescription(`<:No:1122993152064765973> **Sistem zaten kapalı. Ayarlamak için: </uptime-sistemi-kur:0>**`)
       
         interaction.reply({embeds: [SistemKapalı]})
         
@@ -30,7 +30,7 @@ module.exports = {
         const SistemKapandı = new EmbedBuilder()
              .setColor("Green")
              .setTitle("Başarılı")
-             .setDescription(`<:yes:1117512041419251752> **Uptime sistemi başarıyla sıfırlandı.**`)
+             .setDescription(`<:Yes:1122994864049619127> **Uptime sistemi başarıyla sıfırlandı.**`)
         interaction.reply({embeds: [SistemKapandı]})
         
         db.delete(`UptimeSistemi_${interaction.guild.id}`)
