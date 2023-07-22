@@ -15,17 +15,14 @@ module.exports = {
       
 const ProjeYok = new EmbedBuilder()
     .setColor("Red")
-    .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973> **Sistemde böyle bir proje bulunmuyor.**`)
     
 const LinkSilindi = new EmbedBuilder()
     .setColor("Green")
-    .setTitle("Başarılı")
     .setDescription(`<:Yes:1122994864049619127> **Projen başarıyla sistemden silindi.**`)
     
 const LinkSilmeFormu = new ModalBuilder()
     .setCustomId('linksilmeform')
-    .setTitle('Link sil')
 const LinkSilFormu = new TextInputBuilder()
     .setCustomId('linksil')
     .setLabel('Proje adresinizi giriniz.')

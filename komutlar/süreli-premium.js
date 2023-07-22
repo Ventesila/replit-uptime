@@ -29,7 +29,6 @@ module.exports = {
       const YetkiYok = new EmbedBuilder()
       .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
-      .setTitle("Hata")
         
       if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
       return interaction.reply({embeds: [YetkiYok]});
@@ -42,7 +41,6 @@ module.exports = {
       
       const PremiumVar = new EmbedBuilder()
          .setColor("Red")
-         .setTitle("Hata")
          .setDescription(`<:No:1122993152064765973> ${kullanıcı} **adlı kullanıcının zaten premium üyeliği bulunuyor.**`)
         
       if(!PremiumÜye) {
@@ -54,7 +52,6 @@ module.exports = {
         
       const PremiumEklendi = new EmbedBuilder()
          .setColor("Green")
-         .setTitle ("Başarılı")
          .setDescription(`<:Yes:1122994864049619127> ${kullanıcı} **adlı kullanıcıya premium verildi. Bitiş tarihi:** ${moment(PremiumBitiş).format('DD.MM.YYYY - HH:mm:ss')}`)
         
       interaction.reply({embeds: [PremiumEklendi]})

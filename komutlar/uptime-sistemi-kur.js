@@ -26,8 +26,7 @@ module.exports = {
           
         const SistemAçıldı = new EmbedBuilder()
              .setColor("Green")
-             .setTitle("<:onay:1121427062280949911> | İşlem Başarılı.")
-             .setDescription(`<:onay:1121427062280949911> | Uptime kanalı başarıyla <#${kanal.id}> olarak ayarlandı.`)
+             .setDescription(`<:Yes:1122994864049619127> Uptime kanalı başarıyla <#${kanal.id}> olarak ayarlandı.`)
         interaction.reply({embeds: [SistemAçıldı]})
         
         const SistemMesajı = new EmbedBuilder()
@@ -67,8 +66,7 @@ module.exports = {
            
         const SistemAçık = new EmbedBuilder()
          .setColor("Red")
-         .setTitle("<:No:1121426474856087632> İşlem Başarısız.")
-         .setDescription(`<:No:1121426474856087632> Uptime sistemi zaten kurulu. Sıfırlamak için: ``/uptime-sıfırla**`` `)
+         .setDescription(`<:No:1121426474856087632> Uptime sistemi zaten kurulu. Sıfırlamak için </uptime-sistemi-sıfırla0>`)
       
         interaction.reply({embeds: [SistemAçık]})
         

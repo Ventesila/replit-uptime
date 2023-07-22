@@ -23,7 +23,6 @@ module.exports = {
           
       const PremiumAktif = new EmbedBuilder()
          .setColor("Green")
-         .setTitle("Premium bulunuyor")
          .setDescription(`<:Yes:1122994864049619127>> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** ${moment.duration(db.fetch(`Premium_${interaction.user.id}`).Bitiş - Date.now()).format('w [hafta] d [gün] h [saat] m [dakika] s [saniye]')}`)
         
       interaction.reply({embeds: [PremiumAktif]}) 
@@ -32,7 +31,6 @@ module.exports = {
         
         const PremiumVar = new EmbedBuilder()
          .setColor("Green")
-         .setTitle("Premium bulunuyor")
          .setDescription(`<:Yes:1122994864049619127> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** Süresiz`)
         
         interaction.reply({embeds: [PremiumVar]})
@@ -47,7 +45,6 @@ module.exports = {
       
       const PremiumDeaktif = new EmbedBuilder()
          .setColor("Red")
-         .setTitle("Premium bulunmuyor")
          .setDescription(`<:No:1122993152064765973> **Premium üyeliğiniz bulunmamaktadır, Premium üyelik almak için destek sunucusuna gelebilirsiniz.**`)
         
       interaction.reply({embeds: [PremiumDeaktif], components: [Destek]}) 

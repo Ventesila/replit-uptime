@@ -21,7 +21,6 @@ module.exports = {
       const YetkiYok = new EmbedBuilder()
          .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
          .setColor('Red')
-         .setTitle("Hata")
         
       if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
       return interaction.reply({embeds: [YetkiYok]});
@@ -32,12 +31,10 @@ module.exports = {
       const KaralisteÇıkartılmaz = new EmbedBuilder()
         .setDescription(`<:No:1122993152064765973> **Bot sahipleri bu komutdan etkilenmez.**`)
         .setColor('Red')
-        .setTitle("Hata")
       
       const KaralisteGitti = new EmbedBuilder()
       .setDescription(`<:Yes:1122994864049619127> ${kullanıcı} **adlı kullanıcı karalisteden çıkartıldı, artık botu kullanabilir.**`)
       .setColor('Green')
-      .setTitle("Başarılı")
       
       const KaralistedenÇıkartıldı = new EmbedBuilder()
          .setColor("Green")
@@ -56,7 +53,6 @@ module.exports = {
         const KaralistedeYok = new EmbedBuilder()
            .setDescription(`:x: ${kullanıcı} **adlı kullanıcı zaten karalistede bulunmuyor.**`)
            .setColor('Red')
-           .setTitle("Hata")
         
         interaction.reply({embeds: [KaralistedeYok]})
       

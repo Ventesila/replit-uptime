@@ -20,7 +20,6 @@ module.exports = {
       const YetkiYok = new EmbedBuilder()
         .setDescription(`**<:No:1122993152064765973> Bu komutu kullanabilmek için \`Bot sahibi\` olmalısın.**`)
         .setColor('Red')
-        .setTitle("Olamaz yetkin yok")
       
       if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
       return interaction.reply({embeds: [YetkiYok]})
@@ -34,13 +33,11 @@ module.exports = {
       const DuyuruYok = new EmbedBuilder()
         .setDescription(`**<:No:1122993152064765973> Sistemde \`${duyuru}\` adında bir duyuru bulunmuyor.**`)
         .setColor('Red')
-        .setTitle("Duyuru yok")
       interaction.reply({embeds: [DuyuruYok]})
        
       } else {
       
       const Embed = new EmbedBuilder()
-        .setTitle(`Duyuru kaldırıldı`)
         .setDescription(`**<:Yes:1122994864049619127> \`${duyuru}\` adlı duyuru sistemden kaldırıldı.**`)
         .setColor("Green")
       interaction.reply({embeds: [Embed]})

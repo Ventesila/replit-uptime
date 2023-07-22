@@ -28,52 +28,42 @@ LinkEklemeFormu.addComponents(LinkEklemeSistemi);
       
 const PreYok = new EmbedBuilder()
     .setColor("Red")
-    .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973> **Normal bir kullanıcı en fazla 3 proje ekleyebilir, Destek sunucusuna gelerek link limitinizi arttırabilir veya premium alarak sınırsız link ekleme hakkı kazanabilirsiniz.**`)
     
 const FazlaLink = new EmbedBuilder()
     .setColor("Red")
-    .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973> **Bir kullanıcı tarafından en fazla 999 link eklenebilir.**`)
    
 const LinkVar = new EmbedBuilder()
     .setColor("Red")
-    .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973> **Belirtilen proje sistemde bulunuyor.**`)
     
 const BaşıHatalı = new EmbedBuilder()
     .setColor("Red")
-    .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973> **Proje linkin hatalı, linkin başında \`https://\` olduğundan emin ol.**`)
     
 const SonuHatalı = new EmbedBuilder()
     .setColor("Red")
-    .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973> **Yalnızca glitch projeleri aktif tutulmaktdır, linkin sonunda \`.glitch.me\` olduğundan emin ol.**`)
     
 const LinkEklendi = new EmbedBuilder()
     .setColor("Green")
-    .setTitle("Başarılı")
     .setDescription(`<:Yes:1122994864049619127> **Projen başarıyla sisteme eklendi, linkiniz 2-5 dk içerisinde aktif olacaktır.**`)
         
 const ProjeYok = new EmbedBuilder()
     .setColor("Red")
-    .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973> **Sistemde böyle bir proje bulunmuyor.**`)
     
 const LinkSilindi = new EmbedBuilder()
     .setColor("Green")
-    .setTitle("Başarılı")
     .setDescription(`<:Yes:1122994864049619127> **Projen başarıyla sistemden silindi.**`)
     
 const Silindi = new EmbedBuilder()
     .setColor("Green")
-    .setTitle("Başarılı")
     .setDescription(`<:Yes:1122994864049619127> **Proje başarıyla sistemden silindi.**`)
     
 const ProjeEklenmemiş = new EmbedBuilder()
     .setColor("Red")
-    .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973>  **Sisteme hiç proje eklememişsin.**`)
       await interaction.showModal(LinkEklemeFormu);
   

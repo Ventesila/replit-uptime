@@ -15,7 +15,6 @@ module.exports = {
       
       const ProjeEklenmemiş = new EmbedBuilder()
           .setColor("Red")
-          .setTitle("Hata")
           .setDescription(`<:no:1117512106833612883> **Sisteme hiç proje eklememişsin.**`)
     
       const LinkYok = db.get(`UptimeLink_${interaction.user.id}`)

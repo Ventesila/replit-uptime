@@ -22,7 +22,6 @@ module.exports = {
       const YetkiYok = new EmbedBuilder()
       .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
-      .setTitle("Hata")
       
       if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
     return interaction.reply({embeds: [YetkiYok]});
@@ -37,7 +36,6 @@ module.exports = {
          const Token = new EmbedBuilder()
           .setDescription(`<:No:1122993152064765973> **Bu şekilde tokenimi alamazsın.**`)
           .setColor('Red')
-          .setTitle("Hata")
          
          if (evaled.includes(client.token)) return interaction.reply({embeds: [Token]});
                 
@@ -45,7 +43,6 @@ module.exports = {
          .addFields({name: `<:Giris:1048294668707835984> **Kod girişi**`, value: `\`${code}\``})
          .addFields({name: `<:Cikis:1048294654141010010> **Kod çıkışı**`, value: `\`${evaled}\``}) 
          .setColor('Green')
-         .setTitle("Başarılı")
          interaction.reply({embeds: [Eval]})
         
          } catch (err) {
@@ -54,7 +51,6 @@ module.exports = {
          .addFields({name: `<:Giris:1048294668707835984> **Kod girişi**`, value: `\`${code}\``})
          .addFields({name: `<:Hata:1048294942054809630> **Hata**`, value: `\`${err}\``}) 
          .setColor('Red')
-         .setTitle("Hata")
          interaction.reply({embeds: [Hata]});
          }
            

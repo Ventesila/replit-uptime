@@ -17,7 +17,6 @@ module.exports = {
       const YetkiYok = new EmbedBuilder()
       .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
-      .setTitle("Hata")
       
     if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
     return interaction.reply({embeds: [YetkiYok]});
@@ -31,7 +30,6 @@ module.exports = {
       const BakımKapalı = new EmbedBuilder()
       .setDescription(`<:No:1122993152064765973> **Bot zaten bakımda bulunmuyor.**`)
       .setColor('Red')
-      .setTitle("Hata")
       interaction.reply({embeds: [BakımKapalı]})
         
       } else {
@@ -42,7 +40,6 @@ module.exports = {
       const BakımKapatıldı = new EmbedBuilder()
       .setDescription(`<:Yes:1122994864049619127> **Bot bakımdan çıkartıldı.**`)
       .setColor('Green')
-      .setTitle("Başarılı")
       interaction.reply({embeds: [BakımKapatıldı]})
       
         }
