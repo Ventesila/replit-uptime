@@ -31,7 +31,7 @@ module.exports = {
         
         const SistemMesajı = new EmbedBuilder()
              .setColor("Blue")
-             .setImage("https://cdn.discordapp.com/attachments/1125828373395017920/1125828419523989627/Adsz.png")
+             .setImage("https://cdn.discordapp.com/attachments/1112643961392209981/1132472847386816552/Picsart_23-07-23_03-42-28-909.png")
              .setDescription("**Uptime Sistemi | Uptime System** \n")
 .addFields({name: "<:Tr:1126168752992550963>", value: "<:Poltika:1132425331589009419> | Gizlilik ve Güvenlik politikamızı destek sunucumuzdan görebilirsin! \n <:Ekle:1132419170596831232> | Link eklemek için: **Ekle | Add** \n <:Sil:1132424813705711747> | Linkinizi silmek için: **Sil | Delete** \n <:Liste:1132425047731085333> | Linklerinizi görmek için: **Liste | List** \n <:Help:1132425356184387634> | Aradığınızı bulamadıysanız veya öneriniz varsa sizi destek sunucumuza bekleriz. \n "}, {name: "<:Us:1126168782130380891>", value: "<:Poltika:1132425331589009419> | You can view our Privacy and Security policy on our support server! \n <:Ekle:1132419170596831232> | To add link: **Ekle | Add** \n <:Sil:1132424813705711747> | To remove your links: **Sil | Delete** \n <:Liste:1132425047731085333> | To see your links: **Liste | List** \n <:Help:1132425356184387634> | If you didn't find what you were looking for or if you have a suggestion, we welcome you to our support server."})
         
