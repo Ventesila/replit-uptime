@@ -20,11 +20,10 @@ module.exports = {
     async execute(client, interaction) {   
       
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:Carpi:1046504575277998130> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
-      .setTitle("Hata")
       
-      if(interaction.user.id !== "873182701061021696" && interaction.user.id !== "1068897096951935017" && interaction.user.id !== "1068902433977286769" && interaction.user.id !== "1029431477219360869" && interaction.user.id !== "990186530767249419" && interaction.user.id !== "1059475189588570122"){
+      if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
     return interaction.reply({embeds: [YetkiYok]});
 }
     
@@ -35,9 +34,8 @@ module.exports = {
       if (evaled.match(new RegExp(`${client.token}`, "g")));
          
          const Token = new EmbedBuilder()
-          .setDescription(`<:Carpi:1046504575277998130> **Bu şekilde tokenimi alamazsın.**`)
+          .setDescription(`<:No:1122993152064765973> **Bu şekilde tokenimi alamazsın.**`)
           .setColor('Red')
-          .setTitle("Hata")
          
          if (evaled.includes(client.token)) return interaction.reply({embeds: [Token]});
                 
@@ -45,7 +43,6 @@ module.exports = {
          .addFields({name: `<:Giris:1048294668707835984> **Kod girişi**`, value: `\`${code}\``})
          .addFields({name: `<:Cikis:1048294654141010010> **Kod çıkışı**`, value: `\`${evaled}\``}) 
          .setColor('Green')
-         .setTitle("Başarılı")
          interaction.reply({embeds: [Eval]})
         
          } catch (err) {
@@ -54,7 +51,6 @@ module.exports = {
          .addFields({name: `<:Giris:1048294668707835984> **Kod girişi**`, value: `\`${code}\``})
          .addFields({name: `<:Hata:1048294942054809630> **Hata**`, value: `\`${err}\``}) 
          .setColor('Red')
-         .setTitle("Hata")
          interaction.reply({embeds: [Hata]});
          }
            

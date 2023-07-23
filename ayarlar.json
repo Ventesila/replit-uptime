@@ -1,6 +1,5 @@
   {
-    "prefix": "",
-    "botid": "",
-    "ownerid": [""],
-    "token": ""
+    "prefix": "PREFİX",
+    "botid": "BOT İD",
+    "ownerid": ["SAHİP İD"]
 }

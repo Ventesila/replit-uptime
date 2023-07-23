@@ -7,7 +7,7 @@ module.exports = {
 
     data: new SlashCommandBuilder()         
     .setName('sil')
-    .setDescription('Bot sahibi özel komutu.')
+    .setDescription('<:No:1122993152064765973> Bu komutu sadece <@1112637700604960880> kullanabilir')
     .setDMPermission(false),
   
     async execute(client, interaction) {   

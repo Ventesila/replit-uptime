@@ -15,10 +15,9 @@ module.exports = {
       
     async execute(client, interaction) {   
       
-      let a = client.users.cache.get('1068897096951935017').tag
-      let b = client.users.cache.get('873182701061021696').tag
-      let c = client.users.cache.get('1068902433977286769').tag
-      let d = client.users.cache.get('1029431477219360869').tag
+      let a = client.users.cache.get('1112637700604960880').tag
+
+   
       
     //  osutils.cpuUsage(function(v) {
         
@@ -34,65 +33,78 @@ module.exports = {
       let minutes = Math.floor(client.uptime / 60000) % 60;
       let seconds = Math.floor(client.uptime / 1000) % 60;
       
-      const IstatistikYok = new EmbedBuilder()
-      .setTitle(`HarenUptime • İstatistikler`)
-      .setColor("Blurple")
+       const IstatistikYok = new EmbedBuilder()
+      .setColor("Blue")
+      .setAuthor({name: interaction.user.username, iconURL: interaction.user.avatarURL()}) 
+      .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
       .addFields({
-          name: "<:Tac:1046822690448748574> Bot geliştiricileri",
-          value: `**[${a}](https://discord.com/users/1068897096951935017)**\n**[${b}](https://discord.com/users/873182701061021696)**\n**[${c}](https://discord.com/users/1068902433977286769)**\n**[${d}](https://discord.com/users/1029431477219360869)**`
+          name: "<:icons_owner:1122979036445016064> | Geliştiriciler",
+          value: `> **[Erasty](https://discord.com/users/1112637700604960880)**`,
+          inline: true
         },
         {
-          name: "<:Js:1046823440688103434> Kütüphane",
-          value: `\`Discord.js v14.7.1\``
+          name: "<:icons_javascript:1122978984049786983> | Discord.JS",
+          value: `> **v14.9.0**`,
+          inline: true
+        }, 
+        {
+          name: "<:r_nodejs:1122977822051401728> | Node.JS",
+          value: `> **v20.0.0**`,
+          inline: true
         },
         {
-          name: "<:Node:1046823461290508338> Node sürümü",
-          value: `\`Node.js v16.14.2\``
+          name: "<:icons_uptime:1113174473093419049> | Çalışma Süresi", 
+          value: `> **${days}gün ${hours}saat ${minutes}dakika ${seconds}saniye**`,
+          inline: true
         },
         {
-          name: "<:Uptime:1046823485428731934> Bot uptime", 
-          value: `\`${days} Gün ${hours} Saat ${minutes} Dakika ${seconds} Saniye\``
+          name: "<:icons_share:1122979327861076118> | Toplam sunucular",
+          value: `> **${client.guilds.cache.size}**`,
+          inline: true
         },
         {
-          name: "<:Sunucu:1046824609758060624> Toplam sunucular",
-          value: `\`${client.guilds.cache.size} Sunucu\``
+          name: "<:botkullanici:1122979100689174661> | Toplam kullanıcılar",
+          value: `> **${client.users.cache.size}**`,
+          inline: true
         },
+      
         {
-          name: "<:Kullanici:1046824624165486685> Toplam kullanıcılar",
-          value: `\`${client.users.cache.size} Kullanıcı\``
-        },
-        {
-          name: "<:Ping:1046824640149987428> Bot gecikmesi",
-          value: `\`${Math.round(client.ws.ping)}ms\``
-        },
-        {
-        name: "<:Bot:1051374431819284603> Mesaj gecikmesi",
-        value: `\`${Date.now() - interaction.createdTimestamp}ms\``, 
+        name: "<:icons_bots:1122979128983957686> | Mesaj gecikmesi",
+        value: `> **${Date.now() - interaction.createdTimestamp}ms**`,
+          inline: true 
         },      
       /*  {
         name: "<:Bellek:1068161257473052722> Bellek kullanımı",
         value: `\`%${(v * 100).toString().split(".")[0] + "." + (v * 100).toString().split(".")[1].split('')[0] + (v * 100).toString().split(".")[1].split('')[1]}\``, 
         },  */
         {
-        name: "<:Ram:1069551472544587806> Ram kullanımı",
-        value: `\`${(process.memoryUsage().heapUsed / 2024 / 2024).toFixed(2)}mb\``, 
+        name: "<:ram:1122979156494405723> | Ram kullanımı",
+        value: `> **${(process.memoryUsage().heapUsed / 2024 / 2024).toFixed(2)}mb\**`,
+          inline: true
         },
         {
-          name: "<:Belge:1046825193131225169> Toplam projeler",
-          value: `\`${Linkler.length}\``
+          name: "<:icons_todolist:1122979182369067180> | Toplam projeler",
+          value: `> **${Linkler.length}**`,
+          inline: true
         },
         {
-          name: "<:Link:1046776084965900308> Senin projelerin",
-          value: `\`Hiç link eklememişsin\``
+          name: "<:icons_link:1122979226186948691> | Senin projelerin",
+          value: `> **${Uptime.length}\**`,
+          inline: true
         },
         {           
-          name: "<:Premium:1047169286659129487> Toplam premium üyeler",
-          value: `\`${db.fetch(`PremiumSayı`) || 0}\``
+          name: "<:icons_premiumchannel:1122979252992753755> | Toplam premium",
+          value: `> **${db.fetch(`PremiumSayı`) || 0}\**`,
+          inline: true
         },
         {           
-          name: "<:Limit:1065321210847707227> Link ekleme hakkın",
-          value: `\`${Limit}\``
-        })        
+          name: "<:makine:1113173952664174696> | Monitör hakkın",
+          value: `> **${Limit}**`,
+          inline: true
+        })          
+      
+      .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
+    .setTimestamp()
      
      return interaction.reply({embeds: [IstatistikYok]})
        
@@ -104,64 +116,76 @@ module.exports = {
        let seconds = Math.floor(client.uptime / 1000) % 60;
       
      const Istatistik = new EmbedBuilder()
-      .setTitle(`HarenUptime • İstatistikler`)
-      .setColor("Blurple")
+      .setColor("Blue")
+      .setAuthor({name: interaction.user.username, iconURL: interaction.user.avatarURL()}) 
+      .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
       .addFields({
-          name: "<:Tac:1046822690448748574> Bot geliştiricileri",
-          value: `**[${a}](https://discord.com/users/1068897096951935017)**\n**[${b}](https://discord.com/users/873182701061021696)**\n**[${c}](https://discord.com/users/1068902433977286769)**\n**[${d}](https://discord.com/users/1029431477219360869)**`
+          name: "<:icons_owner:1122979036445016064> Bot geliştiricileri",
+        value: `> **[Erasty](https://discord.com/users/1112637700604960880)**`,
+          inline: true
         },
         {
-          name: "<:Js:1046823440688103434> Kütüphane",
-          value: `\`Discord.js v14.7.1\``
+          name: "<:javascript:1122978984049786983> Discord.JS",
+          value: `> **v14.7.1**`,
+          inline: true
+        }, 
+        {
+          name: "<:icons_uptime:1113174473093419049> | Çalışma Süresi", 
+          value: `> **${days}gün ${hours}saat ${minutes}dakika ${seconds}saniye**`,
+          inline: true
         },
         {
-          name: "<:Node:1046823461290508338> Node sürümü",
-          value: `\`Node.js v16.14.2\``
+          name: "<:nodejs:1122977822051401728> Kütüphane",
+          value: `> **v16.14.2**`,
+          inline: true
         },
         {
-          name: "<:Uptime:1046823485428731934> Bot uptime", 
-          value: `\`${days}gün ${hours}saat ${minutes}dakika ${seconds}saniye\``
+          name: "<:icons_share:1122979327861076118> Toplam sunucular",
+          value: `> **${client.guilds.cache.size}**`,
+          inline: true
         },
         {
-          name: "<:Sunucu:1046824609758060624> Toplam sunucular",
-          value: `\`${client.guilds.cache.size} sunucu\``
+          name: "<:botkullanici:1122979100689174661> Toplam kullanıcılar",
+          value: `> **${client.users.cache.size}**`,
+          inline: true
         },
         {
-          name: "<:Kullanici:1046824624165486685> Toplam kullanıcılar",
-          value: `\`${client.users.cache.size} kullanıcı\``
-        },
-        {
-          name: "<:Ping:1046824640149987428> Bot gecikmesi",
-          value: `\`${Math.round(client.ws.ping)}ms\``
-        },
-        {
-        name: "<:Bot:1051374431819284603> Mesaj gecikmesi",
-        value: `\`${Date.now() - interaction.createdTimestamp}ms\``, 
+        name: "<:icons_bots:1122979128983957686> Mesaj gecikmesi",
+        value: `> **${Date.now() - interaction.createdTimestamp}ms**`,
+          inline: true 
         },      
       /*  {
         name: "<:Bellek:1068161257473052722> Bellek kullanımı",
         value: `\`%${(v * 100).toString().split(".")[0] + "." + (v * 100).toString().split(".")[1].split('')[0] + (v * 100).toString().split(".")[1].split('')[1]}\``, 
         },  */
         {
-        name: "<:Ram:1069551472544587806> Ram kullanımı",
-        value: `\`${(process.memoryUsage().heapUsed / 2024 / 2024).toFixed(2)}mb\``, 
+        name: "<:ram:1122979156494405723> Ram kullanımı",
+        value: `> **${(process.memoryUsage().heapUsed / 2024 / 2024).toFixed(2)}mb\**`,
+          inline: true
         },
         {
-          name: "<:Belge:1046825193131225169> Toplam projeler",
-          value: `\`${Linkler.length}\``
+          name: "<:icons_todolist:1122979182369067180> Toplam projeler",
+          value: `> **${Linkler.length}**`,
+          inline: true
         },
         {
-          name: "<:Link:1046776084965900308> Senin projelerin",
-          value: `\`${Uptime.length}\``
+          name: "<:icons_link:1122979226186948691> Senin projelerin",
+          value: `> **${Uptime.length}\**`,
+          inline: true
         },
         {           
-          name: "<:Premium:1047169286659129487> Toplam premium üyeler",
-          value: `\`${db.fetch(`PremiumSayı`) || 0}\``
+          name: "<:icons_premiumchannel:1122979252992753755> Toplam premium",
+          value: `> **${db.fetch(`PremiumSayı`) || 0}\**`,
+          inline: true
         },
         {           
-          name: "<:Limit:1065321210847707227> Link ekleme hakkın",
-          value: `\`${Limit}\``
+          name: "<:icons_settings:1113173952664174696> Monitör hakkın",
+          value: `> **${Limit}**`,
+          inline: true
         })       
+     
+     .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
+    .setTimestamp()
      
      return interaction.reply({embeds: [Istatistik]})
                
