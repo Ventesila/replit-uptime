@@ -23,11 +23,11 @@ module.exports = {
         
       const SayYok = new EmbedBuilder()
          .setColor("Blurple")
-         .setTitle("Erasty Uptime • Proje sayıları")
-         .addFields({name: `<:Belge:1122977822051401728> **Sistemdeki toplam projeler**`, value: `> ${Linkler.length}`})
-         .addFields({name: `<:Link:1122988494680232077> **Senin toplam projelerin**`, value: `> ${KişiLinkleri.length}`})
-         .addFields({name: `<:Premium:1122993100332204146> **Toplam premium üyeler**`, value: `> ${db.fetch(`PremiumSayı`) || 0}`})
-         .addFields({name: `<:Limit:1122979156494405723> **Link ekleme hakkın**`, value: `> ${Limit}`})
+         .setTitle("HarenUptime • Proje sayıları")
+         .addFields({name: `<:Belge:1046825193131225169> **Sistemdeki toplam projeler**`, value: `${Linkler.length}`})
+         .addFields({name: `<:Link:1046776084965900308> **Senin toplam projelerin**`, value: `Hiç link eklememişsin.`})
+         .addFields({name: `<:Premium:1047169286659129487> **Toplam premium üyeler**`, value: `${db.fetch(`PremiumSayı`) || 0}`})
+         .addFields({name: `<:Limit:1065321210847707227> **Link ekleme hakkın**`, value: `${Limit}`})
         
       interaction.reply({embeds: [SayYok]})
       
@@ -35,11 +35,11 @@ module.exports = {
       
       const Say = new EmbedBuilder()
          .setColor("Blurple")
-         .setTitle("Erasty Uptime • Proje sayıları")
-         .addFields({name: `<:Belge:1122977822051401728> **Sistemdeki toplam projeler**`, value: `> ${Linkler.length}`})
-         .addFields({name: `<:Link:1122988494680232077> **Senin toplam projelerin**`, value: `> ${KişiLinkleri.length}`})
-         .addFields({name: `<:Premium:1122993100332204146> **Toplam premium üyeler**`, value: `> ${db.fetch(`PremiumSayı`) || 0}`})
-         .addFields({name: `<:Limit:1122979156494405723> **Link ekleme hakkın**`, value: `> ${Limit}`})
+         .setTitle("HarenUptime • Proje sayıları")
+         .addFields({name: `<:Belge:1046825193131225169> **Sistemdeki toplam projeler**`, value: `${Linkler.length}`})
+         .addFields({name: `<:Link:1046776084965900308> **Senin toplam projelerin**`, value: `${KişiLinkleri.length}`})
+         .addFields({name: `<:Premium:1047169286659129487> **Toplam premium üyeler**`, value: `${db.fetch(`PremiumSayı`) || 0}`})
+         .addFields({name: `<:Limit:1065321210847707227> **Link ekleme hakkın**`, value: `${Limit}`})
         
       interaction.reply({embeds: [Say]})
         

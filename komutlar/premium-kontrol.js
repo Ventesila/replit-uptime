@@ -23,7 +23,8 @@ module.exports = {
           
       const PremiumAktif = new EmbedBuilder()
          .setColor("Green")
-         .setDescription(`<:Yes:1122994864049619127>> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** ${moment.duration(db.fetch(`Premium_${interaction.user.id}`).Bitiş - Date.now()).format('w [hafta] d [gün] h [saat] m [dakika] s [saniye]')}`)
+         .setTitle("Premium bulunuyor")
+         .setDescription(`<:Tik:1046504590775947274> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** ${moment.duration(db.fetch(`Premium_${interaction.user.id}`).Bitiş - Date.now()).format('w [hafta] d [gün] h [saat] m [dakika] s [saniye]')}`)
         
       interaction.reply({embeds: [PremiumAktif]}) 
       
@@ -31,7 +32,8 @@ module.exports = {
         
         const PremiumVar = new EmbedBuilder()
          .setColor("Green")
-         .setDescription(`<:Yes:1122994864049619127> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** Süresiz`)
+         .setTitle("Premium bulunuyor")
+         .setDescription(`<:Tik:1046504590775947274> **Premium üyeliğiniz bulunmaktadır. Premiumun bitişine kalan zaman:** Süresiz`)
         
         interaction.reply({embeds: [PremiumVar]})
         
@@ -39,13 +41,14 @@ module.exports = {
       } else {
       
        const Destek = new ActionRowBuilder().addComponents(new ButtonBuilder()        
-        .setURL(`https://discord.gg/RT62RZssJm`)
+        .setURL(`https://discord.gg/XjBRvvaUzM`)
         .setLabel("Destek sunucusu")
         .setStyle("Link"))
       
       const PremiumDeaktif = new EmbedBuilder()
          .setColor("Red")
-         .setDescription(`<:No:1122993152064765973> **Premium üyeliğiniz bulunmamaktadır, Premium üyelik almak için destek sunucusuna gelebilirsiniz.**`)
+         .setTitle("Premium bulunmuyor")
+         .setDescription(`<:Carpi:1046504575277998130> **Premium üyeliğiniz bulunmamaktadır, Premium üyelik almak için destek sunucusuna gelebilirsiniz.**`)
         
       interaction.reply({embeds: [PremiumDeaktif], components: [Destek]}) 
       

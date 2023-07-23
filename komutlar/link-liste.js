@@ -15,15 +15,16 @@ module.exports = {
       
       const ProjeEklenmemiş = new EmbedBuilder()
           .setColor("Red")
-          .setDescription(`<:no:1117512106833612883> **Sisteme hiç proje eklememişsin.**`)
+          .setTitle("Hata")
+          .setDescription(`<:Carpi:1046504575277998130>  **Sisteme hiç proje eklememişsin.**`)
     
       const LinkYok = db.get(`UptimeLink_${interaction.user.id}`)
  			if (!LinkYok) return interaction.reply({embeds: [ProjeEklenmemiş]})
         
-        const links = db.get(`UptimeLink_${interaction.user.id}`).map(map => `**Link:** ${map}`).join("\n")
+        const links = db.get(`UptimeLink_${interaction.user.id}`).map(map => `<:Link:1046776084965900308> **Link:** ${map}`).join("\n")
 
         const LinkListe = new EmbedBuilder()
-            .setTitle(`Erasty Uptime • Projelerin`)
+            .setTitle(`HarenUptime • Projelerin`)
             .setDescription(`${links || "Sisteme eklenmiş bir proje yok."}`)
             .setColor("Blurple")
 

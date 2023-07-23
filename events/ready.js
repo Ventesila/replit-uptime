@@ -1,8 +1,6 @@
 const Discord = require('discord.js')
 const db = require("croxydb")
 const links = db.fetch("UptimeLink") || []
-const Linkler = db.fetch(`UptimeLink`) || []
-
 module.exports = {
     name: 'ready',
       
@@ -11,8 +9,7 @@ module.exports = {
       console.log(`Bot Aktif`)
 
       setInterval(function () {
-        client.user.setActivity(`${Linkler.length}/500 Link Uptime Ediyor!`)
-        client.user.setActivity(`Linkler Sıfırlandı!`)
-        }, 2000)
+        client.user.setActivity(`/yardım • HarenUptime`)
+        }, 30000)
     }
 }
