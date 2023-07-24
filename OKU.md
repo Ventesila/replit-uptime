@@ -1,4 +1,4 @@
-# V14 Erasty Uptime
+# v14 Erasty Uptime
 
 
 
@@ -16,13 +16,12 @@ Bu Bot Altyapısı YouTube Erasty'e aittir Düzenlenerek Sizlere Sunulmuștur.
 Botununuzun sorunsuz olarak çalışması için [Discord Developer Portal](https://discord.com/developers/applications/) adresinden yine bot sekmesine girip Priviliged Gateway Intents başlığı altındaki butun intentleri açmayı unutmayın.
 
 ---
+YouTube [Erasty](https://www.youtube.com/channel/UC-nU4WHUTfr3KJJmxD_2Twg/?sub_confirmation=1)
 
-YouTube : [Erasty](https://www.youtube.com/channel/UC-nU4WHUTfr3KJJmxD_2Twg/?sub_confirmation=1)
-
-Keyifli Kodlamalar ❤
+Discord Sunucumuz [Erasty Development](https://discord.gg/PqDVN6D47c)
 
 --------------------------------------
 
 
       
-       Bizler için :gem: Değerlisiniz...
+     Bizler için 💎 Değerlisiniz...
