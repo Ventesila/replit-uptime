@@ -1,3 +1,6 @@
+//Bu bot altyapısı youtube erasty'e aittir düzenlenerek sizlere sunulmuștur.
+//Anlatımlı video; https://youtu.be/_WQjR6OniZY
+//Altyapılar sunucumuz; https://discord.gg/PqDVN6D47c
 const Discord = require('discord.js')
 const { Client, Partials, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder, InteractionType, EmbedBuilder, ButtonBuilder } = require('discord.js')
 const client = new Client({ intents: 131071, partials: Object.values(Partials).filter(x => typeof x === "string"), shards: 'auto' })
@@ -12,7 +15,6 @@ const fetch = require('node-fetch')
 const express = require('express')
 const monitor = require('http-monitor')
 client.login(process.env.token)
-//Erasty Development Tarafıbda
 //=====// Embedler \\=====\\
 const PreYok = new EmbedBuilder()
     .setColor("Red")
@@ -468,7 +470,7 @@ setInterval(() => {
 //=====// Seste Tutma \\=====\\
 const { joinVoiceChannel } = require('@discordjs/voice')
 client.on('ready', () => {
-  let channel = client.channels.cache.get("SES KANAL İD")
+  let channel = client.channels.cache.get("1125081070937853952")
  
 
       const VoiceConnection = joinVoiceChannel({
@@ -479,3 +481,6 @@ client.on('ready', () => {
 })
 //=====// Seste Tutma \\=====\\
 
+//Bu bot altyapısı youtube erasty'e aittir düzenlenerek sizlere sunulmuștur.
+//Anlatımlı video; https://youtu.be/_WQjR6OniZY
+//Altyapılar sunucumuz; https://discord.gg/PqDVN6D47c

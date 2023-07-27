@@ -1,5 +1,5 @@
-const Discord = require('discord.js')
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js')
+const Discord = require('discord.js')//YouTube; Erasty
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js')//YouTube; Erasty
 const db = require("croxydb")
 
 module.exports = {

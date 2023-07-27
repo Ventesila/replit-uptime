@@ -1,13 +1,13 @@
-const Discord = require('discord.js')
-const db = require('croxydb')
-const { SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, EmbedBuilder } = require('discord.js')
-const { botid, ownerid } = require("../ayarlar.json")
-const osutils = require('os-utils') 
-
-module.exports = {
+const Discord = require('discord.js')//YouTube; Erasty
+const db = require('croxydb')//YouTube; Erasty
+const { SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, EmbedBuilder } = require('discord.js')//YouTube; Erasty
+const { botid, ownerid } = require("../ayarlar.json")//YouTube; Erasty
+const osutils = require('os-utils') //YouTube; Erasty
+//YouTube; Erasty
+module.exports = {//YouTube; Erasty
     slash: true,                                
     cooldown: 5,                              
-
+//YouTube; Erasty
     data: new SlashCommandBuilder()         
     .setName('istatistik')
     .setDescription('Bot istatistiklerini gösterir.')
@@ -16,8 +16,8 @@ module.exports = {
     async execute(client, interaction) {   
       
       let a = client.users.cache.get('1112637700604960880').tag
-
-   
+//YouTube; Erasty
+   //YouTube; Erasty
       
     //  osutils.cpuUsage(function(v) {
         
@@ -78,45 +78,45 @@ module.exports = {
         value: `\`%${(v * 100).toString().split(".")[0] + "." + (v * 100).toString().split(".")[1].split('')[0] + (v * 100).toString().split(".")[1].split('')[1]}\``, 
         },  */
         {
-        name: "<:ram:1122979156494405723> | Ram kullanımı",
+        name: "<:ram:1122979156494405723> | Ram kullanımı",//YouTube; Erasty
         value: `> **${(process.memoryUsage().heapUsed / 2024 / 2024).toFixed(2)}mb\**`,
           inline: true
         },
-        {
+        {//YouTube; Erasty
           name: "<:icons_todolist:1122979182369067180> | Toplam projeler",
           value: `> **${Linkler.length}**`,
           inline: true
-        },
+        },//YouTube; Erasty
         {
           name: "<:icons_link:1122979226186948691> | Senin projelerin",
           value: `> **${Uptime.length}\**`,
           inline: true
         },
-        {           
+        {           //YouTube; Erasty
           name: "<:icons_premiumchannel:1122979252992753755> | Toplam premium",
           value: `> **${db.fetch(`PremiumSayı`) || 0}\**`,
           inline: true
         },
         {           
-          name: "<:makine:1113173952664174696> | Monitör hakkın",
+          name: "<:makine:1113173952664174696> | Monitör hakkın",//YouTube; Erasty
           value: `> **${Limit}**`,
           inline: true
         })          
       
       .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
-    .setTimestamp()
+    .setTimestamp()//YouTube; Erasty
      
      return interaction.reply({embeds: [IstatistikYok]})
        
-     } else {
+     } else {//YouTube; Erasty
        
        let days = Math.floor(client.uptime / 86400000);
        let hours = Math.floor(client.uptime / 3600000) % 24;
        let minutes = Math.floor(client.uptime / 60000) % 60;
        let seconds = Math.floor(client.uptime / 1000) % 60;
-      
+      //YouTube; Erasty
      const Istatistik = new EmbedBuilder()
-      .setColor("Blue")
+      .setColor("Blue")//YouTube; Erasty
       .setAuthor({name: interaction.user.username, iconURL: interaction.user.avatarURL()}) 
       .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
       .addFields({
@@ -127,7 +127,7 @@ module.exports = {
         {
           name: "<:javascript:1122978984049786983> Discord.JS",
           value: `> **v14.7.1**`,
-          inline: true
+          inline: true//YouTube; Erasty
         }, 
         {
           name: "<:icons_uptime:1113174473093419049> | Çalışma Süresi", 
@@ -136,14 +136,14 @@ module.exports = {
         },
         {
           name: "<:nodejs:1122977822051401728> Kütüphane",
-          value: `> **v16.14.2**`,
+          value: `> **v16.14.2**`,//YouTube; Erasty
           inline: true
         },
         {
           name: "<:icons_share:1122979327861076118> Toplam sunucular",
           value: `> **${client.guilds.cache.size}**`,
           inline: true
-        },
+        },//YouTube; Erasty
         {
           name: "<:botkullanici:1122979100689174661> Toplam kullanıcılar",
           value: `> **${client.users.cache.size}**`,
@@ -151,7 +151,7 @@ module.exports = {
         },
         {
         name: "<:icons_bots:1122979128983957686> Mesaj gecikmesi",
-        value: `> **${Date.now() - interaction.createdTimestamp}ms**`,
+        value: `> **${Date.now() - interaction.createdTimestamp}ms**`,//YouTube; Erasty
           inline: true 
         },      
       /*  {
@@ -163,15 +163,15 @@ module.exports = {
         value: `> **${(process.memoryUsage().heapUsed / 2024 / 2024).toFixed(2)}mb\**`,
           inline: true
         },
-        {
+        {//YouTube; Erasty
           name: "<:icons_todolist:1122979182369067180> Toplam projeler",
-          value: `> **${Linkler.length}**`,
+          value: `> **${Linkler.length}**`,//YouTube; Erasty
           inline: true
         },
         {
           name: "<:icons_link:1122979226186948691> Senin projelerin",
           value: `> **${Uptime.length}\**`,
-          inline: true
+          inline: true//YouTube; Erasty
         },
         {           
           name: "<:icons_premiumchannel:1122979252992753755> Toplam premium",
@@ -181,13 +181,13 @@ module.exports = {
         {           
           name: "<:icons_settings:1113173952664174696> Monitör hakkın",
           value: `> **${Limit}**`,
-          inline: true
+          inline: true//YouTube; Erasty
         })       
      
      .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
-    .setTimestamp()
+    .setTimestamp()//YouTube; Erasty
      
-     return interaction.reply({embeds: [Istatistik]})
+     return interaction.reply({embeds: [Istatistik]})//YouTube; Erasty
                
          }
       // })
