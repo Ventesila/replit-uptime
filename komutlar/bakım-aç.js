@@ -4,7 +4,7 @@ const { botid } = require('../ayarlar.json')
 const db = require("croxydb")
 
 module.exports = {
-    slash: true,                                
+    slash: true,                              //YouTube; Erasty  
     cooldown: 5,                              
 
     data: new SlashCommandBuilder()         

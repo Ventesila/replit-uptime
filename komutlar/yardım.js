@@ -6,8 +6,7 @@ module.exports = {
     slash: true,                                
     cooldown: 5,                              
 
-    data: new SlashCommandBuilder()       
-   
+    data: new SlashCommandBuilder()         
     .setName('yardım')
     .setDescription('Uptime yardım menüsü.')
     .setDMPermission(false),
@@ -16,12 +15,8 @@ module.exports = {
       
       const Duyuru = db.fetch(`Duyurular`)
       if(!Duyuru) {
-
-                      new Discord.ButtonBuilder()  
-        .setEmoji("<:YouTube:1112804009414242324>")
-       .setURL(`https://www.youtube.com/watch?v=_WQjR6OniZY`)
-        .setLabel(`Video`)
-        .setStyle("Link")
+       
+      const Yardım = new EmbedBuilder()
          .setColor("Blurple")
          .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
          .setTitle("Erasty Uptime • Yardım menüsü")
@@ -52,16 +47,13 @@ module.exports = {
 `)
  .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
     .setTimestamp()
- 
+      interaction.reply({embeds: [Yardım]})
         
       } else {
        
         const duyurular = db.fetch(`Duyurular`).map(y => ` \`${y}\``).join("\n")
-                  new Discord.ButtonBuilder()  
-        .setEmoji("<:YouTube:1112804009414242324>")
-       .setURL(`https://www.youtube.com/watch?v=_WQjR6OniZY`)
-        .setLabel(`Video`)
-        .setStyle("Link")
+        
+        const Yardım = new EmbedBuilder()
          .setColor("Blurple")
          .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
          .setTitle("Erasty Uptime • Yardım menüsü")
@@ -94,6 +86,7 @@ module.exports = {
 `)
 .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
     .setTimestamp()
-    }  
+        interaction.reply({embeds: [Yardım]})
+    }   
   }
 }
