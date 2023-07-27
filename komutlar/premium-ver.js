@@ -19,10 +19,11 @@ module.exports = {
     async execute(client, interaction) {   
       
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:Carpi:1046504575277998130> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
+      .setTitle("Hata")
         
-      if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "1059475189588570122"){
+      if(interaction.user.id !== "873182701061021696" && interaction.user.id !== "1068897096951935017" && interaction.user.id !== "1068902433977286769" && interaction.user.id !== "1029431477219360869" && interaction.user.id !== "1059475189588570122"){
       return interaction.reply({embeds: [YetkiYok]});
 }
       
@@ -31,24 +32,26 @@ module.exports = {
       
       const PremiumEklendi = new EmbedBuilder()
          .setColor("Green")
-         .setDescription(`<:Yes:1122994864049619127> ${kullanıcı} **adlı kullanıcıya premium verildi.**`)
+         .setTitle("Başarılı")
+         .setDescription(`<:Tik:1046504590775947274> ${kullanıcı} **adlı kullanıcıya premium verildi.**`)
         
       const PremiumVar = new EmbedBuilder()
          .setColor("Red")
-         .setDescription(`<:No:1122993152064765973> ${kullanıcı} **adlı kullanıcının zaten premium üyeliği bulunuyor.**`)
+         .setTitle("Hata")
+         .setDescription(`<:Carpi:1046504575277998130> ${kullanıcı} **adlı kullanıcının zaten premium üyeliği bulunuyor.**`)
         
       const PremiumVerildi = new EmbedBuilder()
          .setColor("Green")
          .setTitle("Bir kullanıcıya premium verildi")
-         .addFields({name: `<:Kullanici:1122992989325766748> **Kullanıcı adı**`, value: `${kullanıcı}`})
-         .addFields({name: `<:Isim:1122979100689174661> **Kullanıcı tagı**`, value: `${kullanıcı.tag}`})
-         .addFields({name: `<:Id:1122977905727778846> **Kullanıcı id**`, value: `${kullanıcı.id}`})
+         .addFields({name: `<:Kullanici:1046824624165486685> **Kullanıcı adı**`, value: `${kullanıcı}`})
+         .addFields({name: `<:Isim:1047166644281163786> **Kullanıcı tagı**`, value: `${kullanıcı.tag}`})
+         .addFields({name: `<:Id:1047166052741697587> **Kullanıcı id**`, value: `${kullanıcı.id}`})
       
       if(!PremiumÜye) {
       
       db.set(`PremiumÜye_${kullanıcı.id}`, true)
       interaction.reply({embeds: [PremiumEklendi]})
-      client.channels.cache.get("1112800957995167824").send({embeds: [PremiumVerildi]})
+      client.channels.cache.get("1071763010844106813").send({embeds: [PremiumVerildi]})
       db.add(`PremiumSayı`, 1)
       
       } else {

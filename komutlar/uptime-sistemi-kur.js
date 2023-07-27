@@ -9,7 +9,7 @@ module.exports = {
 
     data: new SlashCommandBuilder()         
     .setName('uptime-sistemi-kur')
-    .setDescription('Uptime sistemini sunucunuzda ayarlar.')
+    .setDescription('Sunucuya ait uptime sistemi kurarsınız.')
     .setDMPermission(false)
     .addChannelOption(option =>
         option
@@ -26,39 +26,43 @@ module.exports = {
           
         const SistemAçıldı = new EmbedBuilder()
              .setColor("Green")
-             .setDescription(`<:Yes:1122994864049619127> Uptime kanalı başarıyla <#${kanal.id}> olarak ayarlandı.`)
+             .setTitle("Başarılı")
+             .setDescription(`<:Tik:1046504590775947274> **Uptime sistemi <#${kanal.id}> adlı kanalda kuruldu.**`)
         interaction.reply({embeds: [SistemAçıldı]})
         
         const SistemMesajı = new EmbedBuilder()
-             .setColor("Blue")
-             .setImage("https://cdn.discordapp.com/attachments/1112643961392209981/1132472847386816552/Picsart_23-07-23_03-42-28-909.png")
-             .setDescription("**Erasty Uptime** \n")
-.addFields({name: "<:Poltika:1132425331589009419> | Gizlilik ve Güvenlik politikamızı destek sunucumuzdan görebilirsin!", value: "\n <:Ekle:1132419170596831232> | Link eklemek için: **Ekle** \n <:Sil:1132424813705711747> | Linkinizi silmek için: **Sil** \n <:Liste:1132425047731085333> | Linklerinizi görmek için: **Liste** \n <:Help:1132425356184387634> | Aradığınızı bulamadıysanız veya öneriniz varsa sizi destek sunucumuza bekleriz. \n "},)
-        
-        .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
+             .setColor("Blurple")
+             .setTitle("HarenUptime • Uptime sistemi")
+             .setDescription(`
+> **Uptime sistemine hoşgeldiniz.**
+            
+> **Aşağıdaki \`Ekle\` - \`Sil\` - \`Liste\` butonları ile sistemi kullanabilirsiniz.**
+             
+> **Diğer komutlarıma erişmek için </yardım:0> komutunu kullanabilirsiniz.**
+`)
      
-        const Butonlar = new ActionRowBuilder() 
-           .addComponents(new Discord.ButtonBuilder()
-           .setEmoji("<:Ekle:1132419170596831232>")
+        const EkleButonu = new ActionRowBuilder()
+           .addComponents(new ButtonBuilder()
+           .setEmoji("<:Davet:1047160005998166056>")
            .setLabel("Ekle")
-           .setStyle(ButtonStyle.Success)
-           .setCustomId("eklebuton"),
-          new Discord.ButtonBuilder()
-           .setEmoji("<:Sil:1132424813705711747>")
-           .setLabel("Sil")
-           .setStyle(ButtonStyle.Danger)
-           .setCustomId("silbuton"),
-           new Discord.ButtonBuilder()
-           .setEmoji("<:Liste:1132425047731085333>")
-           .setLabel("Liste")
-           .setStyle(ButtonStyle.Primary)
-           .setCustomId("listebuton"),
-           new Discord.ButtonBuilder()        
-        .setURL(`https://discord.gg/RT62RZssJm`)
-        .setLabel(`Destek sunucusu`)
-        .setStyle("Link"))
+           .setStyle(ButtonStyle.Secondary)
+           .setCustomId("eklebuton"))
         
-        client.channels.cache.get(kanal.id).send({embeds: [SistemMesajı], components: [Butonlar]})
+        const SilButonu = new ActionRowBuilder()
+           .addComponents(new ButtonBuilder()
+           .setEmoji("<:Cop:1066000658190311424>")
+           .setLabel("Sil")
+           .setStyle(ButtonStyle.Secondary)
+           .setCustomId("silbuton"))
+              
+        const ListeButonu = new ActionRowBuilder()
+           .addComponents(new ButtonBuilder()
+           .setEmoji("<:Link:1046776084965900308>")
+           .setLabel("Liste")
+           .setStyle(ButtonStyle.Secondary)
+           .setCustomId("listebuton"))
+        
+        client.channels.cache.get(kanal.id).send({embeds: [SistemMesajı], components: [EkleButonu, SilButonu, ListeButonu]})
         
         db.set(`UptimeSistemi_${interaction.guild.id}`, kanal.id)
           
@@ -66,7 +70,8 @@ module.exports = {
            
         const SistemAçık = new EmbedBuilder()
          .setColor("Red")
-         .setDescription(`<:No:1122993152064765973> Uptime sistemi zaten kurulu. Sıfırlamak için **/uptime-sistemi-sıfırla**`)
+         .setTitle("Hata")
+         .setDescription(`<:Carpi:1046504575277998130> **Sistem zaten açık. Sıfırlamak için: </uptime-sistemi-sıfırla:0>**`)
       
         interaction.reply({embeds: [SistemAçık]})
         
