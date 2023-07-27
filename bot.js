@@ -9,60 +9,60 @@ require("moment-duration-format")
 require("./slash")(client)
 const db = require("croxydb")
 const fetch = require('node-fetch')
-client.login(token)
 const express = require('express')
 const monitor = require('http-monitor')
+client.login(process.env.token)
 
 //=====// Embedler \\=====\\
 const PreYok = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1046504575277998130> **Normal bir kullanıcı en fazla 2 proje ekleyebilir, </link-limit:0> komutu ile link limitinizi arttırabilir, </pre-al:0> komutu ile premium alarak sınırsız link ekleyebilirsiniz.**`)
+    .setDescription(`<:No:1122993152064765973>> **Normal bir kullanıcı en fazla 2 proje ekleyebilir, </link-limit:0> komutu ile link limitinizi arttırabilir, </pre-al:0> komutu ile premium alarak sınırsız link ekleyebilirsiniz.**`)
     
 const FazlaLink = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1046504575277998130> **Bir kullanıcı tarafından en fazla 999 link eklenebilir.**`)
+    .setDescription(`<:No:1122993152064765973> **Bir kullanıcı tarafından en fazla 999 link eklenebilir.**`)
    
 const LinkVar = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1046504575277998130> **Belirtilen proje sistemde bulunuyor.**`)
+    .setDescription(`<:No:1122993152064765973> **Belirtilen proje sistemde bulunuyor.**`)
     
 const BaşıHatalı = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1046504575277998130> **Proje linkin hatalı, linkin başında \`https://\` olduğundan emin ol.**`)
+    .setDescription(`<:No:1122993152064765973> **Proje linkin hatalı, linkin başında \`https://\` olduğundan emin ol.**`)
     
 const SonuHatalı = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1046504575277998130> **Yalnızca glitch projeleri aktif tutulmaktdır, linkin sonunda \`.glitch.me\` olduğundan emin ol.**`)
+    .setDescription(`<:No:1122993152064765973> **Yalnızca glitch projeleri aktif tutulmaktdır, linkin sonunda \`.glitch.me\` olduğundan emin ol.**`)
     
 const LinkEklendi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:Tik:1046504590775947274> **Projen başarıyla sisteme eklendi, linkiniz 2-5 dk içerisinde aktif olacaktır.**`)
+    .setDescription(`<:Yes:1122994864049619127> **Projen başarıyla sisteme eklendi, linkiniz 2-5 dk içerisinde aktif olacaktır.**`)
         
 const ProjeYok = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1046504575277998130> **Sistemde böyle bir proje bulunmuyor.**`)
+    .setDescription(`<:No:1122993152064765973> **Sistemde böyle bir proje bulunmuyor.**`)
     
 const LinkSilindi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:Tik:1046504590775947274> **Projen başarıyla sistemden silindi.**`)
+    .setDescription(`<:Yes:1122994864049619127> **Projen başarıyla sistemden silindi.**`)
     
 const Silindi = new EmbedBuilder()
     .setColor("Green")
     .setTitle("Başarılı")
-    .setDescription(`<:Tik:1046504590775947274> **Proje başarıyla sistemden silindi.**`)
+    .setDescription(`<:Yes:1122994864049619127> **Proje başarıyla sistemden silindi.**`)
     
 const ProjeEklenmemiş = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:Carpi:1046504575277998130>  **Sisteme hiç proje eklememişsin.**`)
+    .setDescription(`<:No:1122993152064765973>  **Sisteme hiç proje eklememişsin.**`)
 //=====// Embedler \\=====\\
 
 //=====// LinkEklemeFormu \\=====\\
@@ -75,7 +75,7 @@ const LinkEkleFormu = new TextInputBuilder()
     .setStyle(TextInputStyle.Paragraph)
     .setMinLength(20)
     .setMaxLength(100)
-    .setPlaceholder('https://proje-linki.glitch.me')
+    .setPlaceholder('https://erasty-uptime.glitch.me')
     .setRequired(true)
 const LinkEklemeSistemi = new ActionRowBuilder().addComponents(LinkEkleFormu);
 LinkEklemeFormu.addComponents(LinkEklemeSistemi);
@@ -91,7 +91,7 @@ const LinkSilFormu = new TextInputBuilder()
     .setStyle(TextInputStyle.Paragraph)
     .setMinLength(20)
     .setMaxLength(100)
-    .setPlaceholder('https://proje-linki.glitch.me')
+    .setPlaceholder('https://erasty-uptime.glitch.me')
     .setRequired(true)
 const LinkSilmeSistemi = new ActionRowBuilder().addComponents(LinkSilFormu);
 LinkSilmeFormu.addComponents(LinkSilmeSistemi); 
@@ -137,11 +137,11 @@ client.on('interactionCreate', async interaction => {
   if (interaction.commandName === "sil") {
     
     const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:Carpi:1046504575277998130> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
       .setTitle("Hata")
         
-    if(interaction.user.id !== "873182701061021696" && interaction.user.id !== "1068897096951935017" && interaction.user.id !== "1068902433977286769" && interaction.user.id !== "1029431477219360869" && interaction.user.id !== "1059475189588570122"){
+    if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "1059475189588570122"){
     return interaction.reply({embeds: [YetkiYok]});
 }
     
@@ -166,22 +166,22 @@ client.on('interactionCreate', async interaction => {
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:Carpi:1046504575277998130>"
+        PreVarmı = "<:No:1122993152064765973>"
         } else {
-        PreVarmı = "<:Tik:1046504590775947274>"
+        PreVarmı = "<:Yes:1122994864049619127>"
         }
       
       
         const ProjeSilindi = new EmbedBuilder()
          .setColor("Red")
          .setTitle("Bot sahibi tarafından sistemden bir link silindi")
-         .addFields({name: `<:Kullanici:1046824624165486685> **Kullanıcı adı**`, value: `<@${linkID}>`})
-         .addFields({name: `<:Id:1047166052741697587> **Kullanıcı id**`, value: `${linkID}`})
+         .addFields({name: `<:Kullanici:1122992989325766748> **Kullanıcı adı**`, value: `<@${linkID}>`})
+         .addFields({name: `<:Id:1122977905727778846> **Kullanıcı id**`, value: `${linkID}`})
          .addFields({name: `<:Belge:1046825193131225169> **Sistemdeki link sayısı**`, value: `${db.fetch(`UptimeLink`).length}`})
-         .addFields({name: `<:Link:1046776084965900308> **Kullanıcının link sayısı**`, value: `${db.fetch(`UptimeLink_${linkID}`).length}`})
-         .addFields({name: `<:Premium:1047169286659129487> **Kullanıcının premiumu bulunuyormu**`, value: `${PreVarmı}`})
+         .addFields({name: `<:Link:1122988494680232077> **Kullanıcının link sayısı**`, value: `${db.fetch(`UptimeLink_${linkID}`).length}`})
+         .addFields({name: `<:Premium:1122993100332204146> **Kullanıcının premiumu bulunuyormu**`, value: `${PreVarmı}`})
          .addFields({name: `<:Yazi:1048677751818821702> **Linkin silinme sebebi**`, value: `${Sebep}`})
-        client.channels.cache.get("1062013022446563458").send({embeds: [ProjeSilindi]})
+        client.channels.cache.get("1112800957995167824").send({embeds: [ProjeSilindi]})
         
     }
 })
@@ -193,22 +193,22 @@ client.on('guildCreate', guild => {
   const Eklendim = new EmbedBuilder()
      .setColor("Green")
      .setTitle("Bir sunucuya eklendim")
-     .addFields({name: `<:Isim:1047166644281163786> **Sunucu adı**`, value: `${guild}`})
-     .addFields({name: `<:Id:1047166052741697587> **Sunucu id**`, value: `${guild.id}`})
-     .addFields({name: `<:Sunucu:1046824609758060624> **Toplam sunucu**`, value: `${client.guilds.cache.size}`})
-     .addFields({name: `<:Kullanici:1046824624165486685> **Toplam kullanıcı**`, value: `${client.users.cache.size}`})
-  client.channels.cache.get('1061985950642753623').send({embeds: [Eklendim]})})
+     .addFields({name: `<:Isim:1122992989325766748> **Sunucu adı**`, value: `${guild}`})
+     .addFields({name: `<:Id:1122977905727778846> **Sunucu id**`, value: `${guild.id}`})
+     .addFields({name: `<:Sunucu:1122988494680232077> **Toplam sunucu**`, value: `${client.guilds.cache.size}`})
+     .addFields({name: `<:Kullanici:1122988494680232077> **Toplam kullanıcı**`, value: `${client.users.cache.size}`})
+  client.channels.cache.get('1112800960570462268').send({embeds: [Eklendim]})})
 
   client.on('guildDelete', guild => {
     
     const Atıldım = new EmbedBuilder()
      .setColor("Red")
      .setTitle("Bir sunucudan atıldım")
-     .addFields({name: `<:Isim:1047166644281163786> **Sunucu adı**`, value: `${guild}`})
-     .addFields({name: `<:Id:1047166052741697587> **Sunucu id**`, value: `${guild.id}`})
-     .addFields({name: `<:Sunucu:1046824609758060624> **Toplam sunucu**`, value: `${client.guilds.cache.size}`})
-     .addFields({name: `<:Kullanici:1046824624165486685> **Toplam kullanıcı**`, value: `${client.users.cache.size}`})
-  client.channels.cache.get('1061985950642753623').send({embeds: [Atıldım]})})
+     .addFields({name: `<:Isim:1122992989325766748> **Sunucu adı**`, value: `${guild}`})
+     .addFields({name: `<:Id:1122977905727778846> **Sunucu id**`, value: `${guild.id}`})
+     .addFields({name: `<:Sunucu:1122988494680232077> **Toplam sunucu**`, value: `${client.guilds.cache.size}`})
+     .addFields({name: `<:Kullanici:1122988494680232077> **Toplam kullanıcı**`, value: `${client.users.cache.size}`})
+  client.channels.cache.get('1112800960570462268').send({embeds: [Atıldım]})})
 //=====// EklendimAtıldım \\=====\\
 
 //=====// LinkEklemeSistemi \\=====\\
@@ -239,7 +239,7 @@ client.on('interactionCreate', async interaction => {
            .setLabel("Destek sunucusu")
            .setStyle("Link"))
           
-          if(interaction.user.id !== "873182701061021696" && interaction.user.id !== "1068897096951935017" && interaction.user.id !== "1068902433977286769" && interaction.user.id !== "1029431477219360869"){
+          if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
   
           interaction.reply({embeds: [Bakımda], components: [Destek], ephemeral: true})
        
@@ -298,21 +298,21 @@ client.on('interactionCreate', async interaction => {
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:Carpi:1046504575277998130>"
+        PreVarmı = "<:No:1122993152064765973>"
         } else {
-        PreVarmı = "<:Tik:1046504590775947274>"
+        PreVarmı = "<:Yes:1122994864049619127>"
         }
         
       const ProjeEklendi = new EmbedBuilder()
            .setColor("Green")
            .setTitle("Sisteme bir link eklendi")
-           .addFields({name: `<:Kullanici:1046824624165486685> **Kullanıcı adı**`, value: `<@${interaction.user.id}>`})
-           .addFields({name: `<:Isim:1047166644281163786> **Kullanıcı tagı**`, value: `${interaction.user.tag}`})
-           .addFields({name: `<:Id:1047166052741697587> **Kullanıcı id**`, value: `${interaction.user.id}`})
-           .addFields({name: `<:Belge:1046825193131225169> **Sistemdeki link sayısı**`, value: `${db.fetch(`UptimeLink`).length}`})
-           .addFields({name: `<:Link:1046776084965900308> **Kullanıcının link sayısı**`, value: `${db.fetch(`UptimeLink_${interaction.user.id}`).length}`})
-           .addFields({name: `<:Premium:1047169286659129487> **Kullanıcının premiumu bulunuyormu**`, value: `${PreVarmı}`})
-        client.channels.cache.get("1062013022446563458").send({embeds: [ProjeEklendi]})
+           .addFields({name: `<:Kullanici:1122992989325766748> **Kullanıcı adı**`, value: `<@${interaction.user.id}>`})
+           .addFields({name: `<:Isim:1122979100689174661> **Kullanıcı tagı**`, value: `${interaction.user.tag}`})
+           .addFields({name: `<:Id:1122977905727778846> **Kullanıcı id**`, value: `${interaction.user.id}`})
+           .addFields({name: `<:Belge:1122988494680232077> **Sistemdeki link sayısı**`, value: `${db.fetch(`UptimeLink`).length}`})
+           .addFields({name: `<:Link:1122988494680232077> **Kullanıcının link sayısı**`, value: `${db.fetch(`UptimeLink_${interaction.user.id}`).length}`})
+           .addFields({name: `<:Premium:1122993100332204146> **Kullanıcının premiumu bulunuyormu**`, value: `${PreVarmı}`})
+        client.channels.cache.get("1112800957995167824").send({embeds: [ProjeEklendi]})
         
      } 
  })
@@ -346,7 +346,7 @@ client.on('interactionCreate', async interaction => {
            .setLabel("Destek sunucusu")
            .setStyle("Link"))
           
-          if(interaction.user.id !== "873182701061021696" && interaction.user.id !== "1068897096951935017" && interaction.user.id !== "1068902433977286769" && interaction.user.id !== "1029431477219360869"){
+          if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
   
           interaction.reply({embeds: [Bakımda], components: [Destek]})
        
@@ -376,20 +376,20 @@ client.on('interactionCreate', async interaction => {
         
         let PreVarmı;
         if(!PremiumVarmı) {
-        PreVarmı = "<:Carpi:1046504575277998130>"
+        PreVarmı = "<:No:1122993152064765973>"
         } else {
-        PreVarmı = "<:Tik:1046504590775947274>"
+        PreVarmı = "<:Yes:1122994864049619127>"
         }
       const ProjeSilindi = new EmbedBuilder()
          .setColor("Red")
          .setTitle("Sistemden bir link silindi")
-         .addFields({name: `<:Kullanici:1046824624165486685> **Kullanıcı adı**`, value: `<@${interaction.user.id}>`})
-         .addFields({name: `<:Isim:1047166644281163786> **Kullanıcı tagı**`, value: `${interaction.user.tag}`})
-         .addFields({name: `<:Id:1047166052741697587> **Kullanıcı id**`, value: `${interaction.user.id}`})
-         .addFields({name: `<:Belge:1046825193131225169> **Sistemdeki link sayısı**`, value: `${db.fetch(`UptimeLink`).length}`})
-         .addFields({name: `<:Link:1046776084965900308> **Kullanıcının link sayısı**`, value: `${db.fetch(`UptimeLink_${interaction.user.id}`).length}`})
-         .addFields({name: `<:Premium:1047169286659129487> **Kullanıcının premiumu bulunuyormu**`, value: `${PreVarmı}`})
-        client.channels.cache.get("1062013022446563458").send({embeds: [ProjeSilindi]})
+         .addFields({name: `<:Kullanici:1122992989325766748> **Kullanıcı adı**`, value: `<@${interaction.user.id}>`})
+         .addFields({name: `<:İsim:1122979100689174661> **Kullanıcı tagı**`, value: `${interaction.user.tag}`})
+         .addFields({name: `<:İd:1122977905727778846> **Kullanıcı id**`, value: `${interaction.user.id}`})
+         .addFields({name: `<:Belge:1122988494680232077> **Sistemdeki link sayısı**`, value: `${db.fetch(`UptimeLink`).length}`})
+         .addFields({name: `<:Link:1122988494680232077> **Kullanıcının link sayısı**`, value: `${db.fetch(`UptimeLink_${interaction.user.id}`).length}`})
+         .addFields({name: `<:Premium:1122993100332204146> **Kullanıcının premiumu bulunuyormu**`, value: `${PreVarmı}`})
+        client.channels.cache.get("1112800957995167824").send({embeds: [ProjeSilindi]})
         
     }
 })
@@ -402,11 +402,11 @@ client.on('interactionCreate', async interaction => {
     const Kullanamazsın = new EmbedBuilder()
            .setColor("Red")
            .setTitle("Komutlarımı kullanamazsın")
-           .setDescription(`<:Yasak:1047203094380945458> **Karalistemde bulunduğun için komutlarımı kullanmazsın, karalisteye alınma sebebini öğrenmek için veya karalisteden çıkartılmak için destek sunucuma gelebilirsin.**`)
+           .setDescription(`<:No:1122993152064765973> **Karalistemde bulunduğun için komutlarımı kullanmazsın, karalisteye alınma sebebini öğrenmek için veya karalisteden çıkartılmak için destek sunucuma gelebilirsin.**`)
         
         const Destek = new ActionRowBuilder().addComponents(new ButtonBuilder()        
-           .setURL(`https://discord.gg/XjBRvvaUzM`)
-           .setLabel("Destek sunucusu")
+           .setURL(`https://discord.gg/RT62RZssJm`)
+           .setLabel("Destek Sunucusu")
            .setStyle("Link"))
          
     if (db.fetch(`Karaliste_${interaction.user.id}`)) return interaction.reply({embeds: [Kullanamazsın], components: [Destek], ephemeral: true})
@@ -416,14 +416,14 @@ client.on('interactionCreate', async interaction => {
           const Bakımda = new EmbedBuilder()
            .setColor("Red")
            .setTitle("Bot bakımda")
-           .setDescription(`<:Bakim:1070693677619478669> **Sizlere en iyi hizmeti vermek için kısa süreliğine bakımdayız. Daha ayrıntılı bilgi için destek sunucusuna gelebilirsiniz. Bakım sebebi: \`${db.fetch(`BakımSebep`)}\`**`)
+           .setDescription(`<:Bakım:1070693677619478669> **Sizlere en iyi hizmeti vermek için kısa süreliğine bakımdayız. Daha ayrıntılı bilgi için destek sunucusuna gelebilirsiniz. Bakım sebebi: \`${db.fetch(`BakımSebep`)}\`**`)
         
           const Destek = new ActionRowBuilder().addComponents(new ButtonBuilder()        
-           .setURL(`https://discord.gg/XjBRvvaUzM`)
+           .setURL(`https://discord.gg/RT62RZssJm`)
            .setLabel("Destek sunucusu")
            .setStyle("Link"))
           
-          if(interaction.user.id !== "873182701061021696" && interaction.user.id !== "1068897096951935017" && interaction.user.id !== "1068902433977286769" && interaction.user.id !== "1029431477219360869"){
+          if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
   
           interaction.reply({embeds: [Bakımda], components: [Destek]})
        
@@ -464,4 +464,18 @@ setInterval(() => {
   console.log("Uptime başarılı")
 }, 120000);
 //=====// UptimeEtme \\=====\\
+
+//=====// Seste Tutma \\=====\\
+const { joinVoiceChannel } = require('@discordjs/voice')
+client.on('ready', () => {
+  let channel = client.channels.cache.get("1125081070937853952")
+ 
+
+      const VoiceConnection = joinVoiceChannel({
+          channelId: channel.id,
+          guildId: channel.guild.id,
+          adapterCreator: channel.guild.voiceAdapterCreator
+  });
+})
+//=====// Seste Tutma \\=====\\
 

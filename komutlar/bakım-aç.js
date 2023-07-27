@@ -20,11 +20,10 @@ module.exports = {
     async execute(client, interaction) {   
       
       const YetkiYok = new EmbedBuilder()
-      .setDescription(`<:Carpi:1046504575277998130> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+      .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
       .setColor('Red')
-      .setTitle("Hata")
       
-    if(interaction.user.id !== "873182701061021696" && interaction.user.id !== "1068897096951935017" && interaction.user.id !== "1068902433977286769" && interaction.user.id !== "1029431477219360869" && interaction.user.id !== "1059475189588570122"){
+    if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
     return interaction.reply({embeds: [YetkiYok]});
 }
       
@@ -36,9 +35,8 @@ module.exports = {
       if(Bakım) {
         
       const BakımAçık = new EmbedBuilder()
-      .setDescription(`<:Carpi:1046504575277998130> **Bot zaten \`${Sebep}\` sebebi ile bakımda.**`)
+      .setDescription(`<:No:1122993152064765973> **Bot zaten \`${Sebep}\` sebebi ile bakımda.**`)
       .setColor('Red')
-      .setTitle("Hata")
       interaction.reply({embeds: [BakımAçık]})
         
       } else {
@@ -47,9 +45,8 @@ module.exports = {
       db.set(`BakımSebep`, sebep)
         
       const BakımAçıldı = new EmbedBuilder()
-      .setDescription(`<:Tik:1046504590775947274> **Bot \`${sebep}\` sebebi ile bakıma alındı.**`)
+      .setDescription(`<:Yes:1122994864049619127> **Bot \`${sebep}\` sebebi ile bakıma alındı.**`)
       .setColor('Green')
-      .setTitle("Başarılı")
       interaction.reply({embeds: [BakımAçıldı]})
       
         }

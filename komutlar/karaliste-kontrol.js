@@ -19,11 +19,10 @@ module.exports = {
     async execute(client, interaction) {   
      
        const YetkiYok = new EmbedBuilder()
-          .setDescription(`<:Carpi:1046504575277998130> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
+          .setDescription(`<:No:1122993152064765973> Bu komutu kullanabilmek için **Bot sahibi** olmalısın.`)
           .setColor('Red')
-          .setTitle("Hata")
         
-      if(interaction.user.id !== "873182701061021696" && interaction.user.id !== "1068897096951935017" && interaction.user.id !== "1068902433977286769" && interaction.user.id !== "1029431477219360869" && interaction.user.id !== "990186530767249419" && interaction.user.id !== "1059475189588570122"){
+      if(interaction.user.id !== "1112637700604960880" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB" && interaction.user.id !== "SAHİB"){
        return interaction.reply({embeds: [YetkiYok]});
 }
       
@@ -33,13 +32,11 @@ module.exports = {
       
        const KaralistedeVar = new EmbedBuilder()
          .setColor("Red")
-         .setTitle("Karalistede")
-         .setDescription(`<:Karaliste:1047167116727550023> ${kullanıcı} **adlı kullanıcı karalistede bulunuyor, komutları kullanamaz.**`)
+         .setDescription(`<:No:1122993152064765973> ${kullanıcı} **adlı kullanıcı karalistede bulunuyor, komutları kullanamaz.**`)
       
       const KaralistedeYok = new EmbedBuilder()
          .setColor("Green")
-         .setTitle("Karalistede değil")
-         .setDescription(`<:Tik:1046504590775947274> ${kullanıcı} **adlı kullanıcı karalistede bulunmuyor, komutları kullanabilir.**`)
+         .setDescription(`<:Yes:1122994864049619127> ${kullanıcı} **adlı kullanıcı karalistede bulunmuyor, komutları kullanabilir.**`)
         
       if(!Karaliste) {
       
