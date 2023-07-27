@@ -470,7 +470,7 @@ setInterval(() => {
 //=====// Seste Tutma \\=====\\
 const { joinVoiceChannel } = require('@discordjs/voice')
 client.on('ready', () => {
-  let channel = client.channels.cache.get("1125081070937853952")
+  let channel = client.channels.cache.get("1134138041309614081")
  
 
       const VoiceConnection = joinVoiceChannel({
