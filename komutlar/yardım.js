@@ -19,7 +19,7 @@ module.exports = {
       const Yardım = new EmbedBuilder()
          .setColor("Blurple")
          .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
-         .setTitle("Erasty Uptime • Yardım menüsü")
+         .setTitle("Erasty Uptime • Yardım menüsü")    
          .setDescription(`
 </yardım:0> Yardım menüsünü gösterir.
 
@@ -57,6 +57,7 @@ module.exports = {
          .setColor("Blurple")
          .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
          .setTitle("Erasty Uptime • Yardım menüsü")
+    
          .setDescription(`<:pin:1113173619787452507> **Bot duyuruları**
         > <:sag:1113173952664174696> ${duyurular || "Aktif bir duyuru bulunmuyor."}
       
@@ -85,6 +86,28 @@ module.exports = {
 
 `)
 .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
+          const Butonlar = new ActionRowBuilder() 
+           .addComponents(new Discord.ButtonBuilder()
+           .setEmoji("<:Ekle:1132419170596831232>")
+           .setLabel("Ekle")
+           .setStyle(ButtonStyle.Success)
+           .setCustomId("eklebuton"),
+          new Discord.ButtonBuilder()
+           .setEmoji("<:Sil:1132424813705711747>")
+           .setLabel("Sil")
+           .setStyle(ButtonStyle.Danger)
+           .setCustomId("silbuton"),
+           new Discord.ButtonBuilder()
+           .setEmoji("<:Liste:1132425047731085333>")
+           .setLabel("Liste")
+           .setStyle(ButtonStyle.Primary)
+           .setCustomId("listebuton"),
+           new Discord.ButtonBuilder()  
+        .setEmoji("<:YouTube:1112804009414242324>")
+       .setURL(`https://www.youtube.com/watch?v=_WQjR6OniZY`)
+        .setLabel(`Video`)
+        .setStyle("Link"))
+        
     .setTimestamp()
         interaction.reply({embeds: [Yardım]})
     }   

@@ -32,8 +32,8 @@ module.exports = {
         const SistemMesajı = new EmbedBuilder()
              .setColor("Blue")
              .setImage("https://cdn.discordapp.com/attachments/1112643961392209981/1132472847386816552/Picsart_23-07-23_03-42-28-909.png")
-             .setDescription("**Uptime Sistemi | Uptime System** \n")
-.addFields({name: "<:Tr:1126168752992550963>", value: "<:Poltika:1132425331589009419> | Gizlilik ve Güvenlik politikamızı destek sunucumuzdan görebilirsin! \n <:Ekle:1132419170596831232> | Link eklemek için: **Ekle | Add** \n <:Sil:1132424813705711747> | Linkinizi silmek için: **Sil | Delete** \n <:Liste:1132425047731085333> | Linklerinizi görmek için: **Liste | List** \n <:Help:1132425356184387634> | Aradığınızı bulamadıysanız veya öneriniz varsa sizi destek sunucumuza bekleriz. \n "}, {name: "<:Us:1126168782130380891>", value: "<:Poltika:1132425331589009419> | You can view our Privacy and Security policy on our support server! \n <:Ekle:1132419170596831232> | To add link: **Ekle | Add** \n <:Sil:1132424813705711747> | To remove your links: **Sil | Delete** \n <:Liste:1132425047731085333> | To see your links: **Liste | List** \n <:Help:1132425356184387634> | If you didn't find what you were looking for or if you have a suggestion, we welcome you to our support server."})
+             .setDescription("**Erasty Uptime** \n")
+.addFields({name: "<:Poltika:1132425331589009419> | Gizlilik ve Güvenlik politikamızı destek sunucumuzdan görebilirsin!", value: "\n <:Ekle:1132419170596831232> | Link eklemek için: **Ekle** \n <:Sil:1132424813705711747> | Linkinizi silmek için: **Sil** \n <:Liste:1132425047731085333> | Linklerinizi görmek için: **Liste** \n <:Help:1132425356184387634> | Aradığınızı bulamadıysanız veya öneriniz varsa sizi destek sunucumuza bekleriz. \n "},)
         
         .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
      
@@ -53,9 +53,10 @@ module.exports = {
            .setLabel("Liste")
            .setStyle(ButtonStyle.Primary)
            .setCustomId("listebuton"),
-           new Discord.ButtonBuilder()        
-        .setURL(`https://discord.gg/RT62RZssJm`)
-        .setLabel(`Destek sunucusu`)
+           new Discord.ButtonBuilder()  
+        .setEmoji("<:YouTube:1112804009414242324>")
+       .setURL(`https://www.youtube.com/watch?v=_WQjR6OniZY`)
+        .setLabel(`Video`)
         .setStyle("Link"))
         
         client.channels.cache.get(kanal.id).send({embeds: [SistemMesajı], components: [Butonlar]})
@@ -66,7 +67,7 @@ module.exports = {
            
         const SistemAçık = new EmbedBuilder()
          .setColor("Red")
-         .setDescription(`<:No:1121426474856087632> Uptime sistemi zaten kurulu. Sıfırlamak için </uptime-sistemi-sıfırla0>`)
+         .setDescription(`<:No:1122993152064765973> Uptime sistemi zaten kurulu. Sıfırlamak için **/uptime-sistemi-sıfırla**`)
       
         interaction.reply({embeds: [SistemAçık]})
         
