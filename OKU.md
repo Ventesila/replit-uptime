@@ -10,7 +10,7 @@
 --------------------------------------
 
 
-Bu Bot Altyapısı YouTube Erasty'e aittir Düzenlenerek Sizlere Sunulmuștur.
+Bu bot altyapısı youtube Erasty'e aittir düzenlenerek sizlere sunulmuștur.
 
 
 ## Kurulumlar
@@ -29,4 +29,4 @@ Discord Sunucumuz [Erasty Development](https://discord.gg/PqDVN6D47c)
 
 
       
-     Bizler için :gem: Değerlisiniz...
+     Bizler için 💎 Değerlisiniz...
