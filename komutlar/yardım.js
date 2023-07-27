@@ -18,8 +18,8 @@ module.exports = {
        
       const Yardım = new EmbedBuilder()
          .setColor("Blurple")
-         .setImage("https://cdn.glitch.global/a05428fd-4cef-4667-a4b6-a17f503dbea5/standard%20(3).gif?v=1676280335812")
-         .setTitle("HarenUptime • Yardım menüsü")
+         .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
+         .setTitle("Erasty Uptime • Yardım menüsü")
          .setDescription(`
 </yardım:0> Yardım menüsünü gösterir.
 
@@ -43,47 +43,50 @@ module.exports = {
 
 </uptime-sistemi-sıfırla:0> Sunucudaki uptime sistemini sıfırlar.
 
-**<:Bot:1051374431819284603> Bot duyuruları**
-Aktif bir duyuru bulunmuyor.
+
 `)
+ .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
+    .setTimestamp()
       interaction.reply({embeds: [Yardım]})
         
       } else {
        
-        const duyurular = db.fetch(`Duyurular`).map(y => `**<:Duyuru:1076882238391722136> Duyuru: \`${y}\`**`).join("\n")
+        const duyurular = db.fetch(`Duyurular`).map(y => ` \`${y}\``).join("\n")
         
         const Yardım = new EmbedBuilder()
          .setColor("Blurple")
-         .setImage("https://cdn.glitch.global/a05428fd-4cef-4667-a4b6-a17f503dbea5/standard%20(3).gif?v=1676280335812")
-         .setTitle("HarenUptime • Yardım menüsü")
-         .setDescription(`
-</yardım:0> Yardım menüsünü gösterir.
+         .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
+         .setTitle("Erasty Uptime • Yardım menüsü")
+         .setDescription(`<:pin:1113173619787452507> **Bot duyuruları**
+        > <:sag:1113173952664174696> ${duyurular || "Aktif bir duyuru bulunmuyor."}
+      
+    <:pin:1113188744586084474> **Bot komutları**
+</yardım:0> Erasty Uptime yardım menüsünü gösterir.
 
-</istatistik:0> Bot istatistiklerini gösterir.
+</istatistik:0> Botun istatistiklerini gösterir.
 
-</ping:0> Botun ping değerlerini gösterir.
+</ping:0> Botun gecikme sürelerini gösterir.
 
-</link-say:0> Sistemdeki link sayılarını gösterir.
+</link-say:0> Sistemdeki linklerin sayısını gösterir.
 
 </link-ekle:0> Sisteme link eklersiniz.
 
-</link-sil:0> Sistemden link silersiniz.
+</link-sil:0> Sistemdeki linkinizi silersiniz.
 
-</link-liste:0> Sistemdeki linklerinizi listeler.
+</link-liste:0> Sisteme eklemiş olduğunuz linkleri gösterir.
 
-</premium-kontrol:0> Premium üyeliğinizin olup, olmadığını gösterir.
+</premium-kontrol:0> Premium üyeliğinizi kontrol edersiniz.
 
-</davet:0> Bot linklerini gösterir.
+</davet:0> Botun bağlantılarını gösterir.
 
 </uptime-sistemi-kur:0> Sunucuya özel butonlu uptime sistemini kurarsınız.
 
 </uptime-sistemi-sıfırla:0> Sunucudaki uptime sistemini sıfırlar.
 
-**<:Bot:1051374431819284603> Bot duyuruları**
-${duyurular || "Aktif bir duyuru bulunmuyor."}
 `)
-      interaction.reply({embeds: [Yardım]})
-        
+.setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
+    .setTimestamp()
+        interaction.reply({embeds: [Yardım]})
     }   
   }
 }

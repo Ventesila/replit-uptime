@@ -1,50 +1,50 @@
-const Discord = require('discord.js')
+const Discord = require('discord.js')//Erasty
 const { Client, Partials, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder, InteractionType, EmbedBuilder, ButtonBuilder } = require('discord.js')
 const client = new Client({ intents: 131071, partials: Object.values(Partials).filter(x => typeof x === "string"), shards: 'auto' })
 const { botid, token } = require("./ayarlar.json")
 const moment = require('moment')
-const os = require('os') 
+const os = require('os') //Erasty
 const osutils = require('os-utils') 
 require("moment-duration-format")
 require("./slash")(client)
 const db = require("croxydb")
-const fetch = require('node-fetch')
+const fetch = require('node-fetch')//Erasty
 const express = require('express')
 const monitor = require('http-monitor')
 client.login(process.env.token)
 
 //=====// Embedler \\=====\\
 const PreYok = new EmbedBuilder()
-    .setColor("Red")
+    .setColor("Red")//Erasty
     .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973>> **Normal bir kullanıcı en fazla 2 proje ekleyebilir, </link-limit:0> komutu ile link limitinizi arttırabilir, </pre-al:0> komutu ile premium alarak sınırsız link ekleyebilirsiniz.**`)
     
 const FazlaLink = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:No:1122993152064765973> **Bir kullanıcı tarafından en fazla 999 link eklenebilir.**`)
+    .setDescription(`<:No:1122993152064765973> **Bir kullanıcı tarafından en fazla 999 link eklenebilir.**`)//Erasty
    
 const LinkVar = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973> **Belirtilen proje sistemde bulunuyor.**`)
-    
+    //Erasty
 const BaşıHatalı = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:No:1122993152064765973> **Proje linkin hatalı, linkin başında \`https://\` olduğundan emin ol.**`)
+    .setDescription(`<:No:1122993152064765973> **Proje linkin hatalı, linkin başında \`https://\` olduğundan emin ol.**`)//Erasty
     
 const SonuHatalı = new EmbedBuilder()
     .setColor("Red")
-    .setTitle("Hata")
+    .setTitle("Hata")//Erasty
     .setDescription(`<:No:1122993152064765973> **Yalnızca glitch projeleri aktif tutulmaktdır, linkin sonunda \`.glitch.me\` olduğundan emin ol.**`)
     
 const LinkEklendi = new EmbedBuilder()
-    .setColor("Green")
+    .setColor("Green")//Erasty
     .setTitle("Başarılı")
     .setDescription(`<:Yes:1122994864049619127> **Projen başarıyla sisteme eklendi, linkiniz 2-5 dk içerisinde aktif olacaktır.**`)
         
-const ProjeYok = new EmbedBuilder()
+const ProjeYok = new EmbedBuilder()//Erasty
     .setColor("Red")
     .setTitle("Hata")
     .setDescription(`<:No:1122993152064765973> **Sistemde böyle bir proje bulunmuyor.**`)
@@ -322,13 +322,13 @@ client.on('interactionCreate', async interaction => {
 client.on('interactionCreate', async interaction => {
     if (interaction.customId === "silbuton") {
       
-      const Kullanamazsın = new EmbedBuilder()
+      const Kullanamazsın = new EmbedBuilder()//YouTube; Erasty
            .setColor("Red")
            .setTitle("Komutlarımı kullanamazsın")
            .setDescription(`<:Yasak:1047203094380945458> **Karalistemde bulunduğun için komutlarımı kullanmazsın, karalisteye alınma sebebini öğrenmek için veya karalisteden çıkartılmak için destek sunucuma gelebilirsin.**`)
         
         const Destek = new ActionRowBuilder().addComponents(new ButtonBuilder()        
-           .setURL(`https://discord.gg/XjBRvvaUzM`)
+           .setURL(`https://discord.gg/XjBRvvaUzM`)//YouTube; Erasty
            .setLabel("Destek sunucusu")
            .setStyle("Link"))
          
@@ -337,7 +337,7 @@ client.on('interactionCreate', async interaction => {
     if(db.fetch(`Bakım`)) {
           
           const Bakımda = new EmbedBuilder()
-           .setColor("Red")
+           .setColor("Red")//YouTube; Erasty
            .setTitle("Bot bakımda")
            .setDescription(`<:Bakim:1070693677619478669> **Sizlere en iyi hizmeti vermek için kısa süreliğine bakımdayız. Daha ayrıntılı bilgi için destek sunucusuna gelebilirsiniz. Bakım sebebi: \`${db.fetch(`BakımSebep`)}\`**`)
         
@@ -392,11 +392,11 @@ client.on('interactionCreate', async interaction => {
         client.channels.cache.get("1112800957995167824").send({embeds: [ProjeSilindi]})
         
     }
-})
+})//YouTube; Erasty
 //=====// LinkSilmeSistemi \\=====\\
       
 //=====// LinkListeSistemi \\=====\\
-client.on('interactionCreate', async interaction => {
+client.on('interactionCreate', async interaction => {//YouTube; Erasty
     if (interaction.customId === "listebuton") {
     
     const Kullanamazsın = new EmbedBuilder()
@@ -405,13 +405,13 @@ client.on('interactionCreate', async interaction => {
            .setDescription(`<:No:1122993152064765973> **Karalistemde bulunduğun için komutlarımı kullanmazsın, karalisteye alınma sebebini öğrenmek için veya karalisteden çıkartılmak için destek sunucuma gelebilirsin.**`)
         
         const Destek = new ActionRowBuilder().addComponents(new ButtonBuilder()        
-           .setURL(`https://discord.gg/RT62RZssJm`)
+           .setURL(`https://discord.gg/RT62RZssJm`)//YouTube; Erasty
            .setLabel("Destek Sunucusu")
            .setStyle("Link"))
          
     if (db.fetch(`Karaliste_${interaction.user.id}`)) return interaction.reply({embeds: [Kullanamazsın], components: [Destek], ephemeral: true})
       
-    if(db.fetch(`Bakım`)) {
+    if(db.fetch(`Bakım`)) {//YouTube; Erasty
           
           const Bakımda = new EmbedBuilder()
            .setColor("Red")
@@ -419,7 +419,7 @@ client.on('interactionCreate', async interaction => {
            .setDescription(`<:Bakım:1070693677619478669> **Sizlere en iyi hizmeti vermek için kısa süreliğine bakımdayız. Daha ayrıntılı bilgi için destek sunucusuna gelebilirsiniz. Bakım sebebi: \`${db.fetch(`BakımSebep`)}\`**`)
         
           const Destek = new ActionRowBuilder().addComponents(new ButtonBuilder()        
-           .setURL(`https://discord.gg/RT62RZssJm`)
+           .setURL(`https://discord.gg/RT62RZssJm`)//YouTube; Erasty
            .setLabel("Destek sunucusu")
            .setStyle("Link"))
           
@@ -427,25 +427,25 @@ client.on('interactionCreate', async interaction => {
   
           interaction.reply({embeds: [Bakımda], components: [Destek]})
        
-          }
+          }//YouTube; Erasty
         }
-      
+      //YouTube; Erasty
     const LinkYok = db.get(`UptimeLink_${interaction.user.id}`)
  			if (!LinkYok) return interaction.reply({embeds: [ProjeEklenmemiş], ephemeral: true})
-        
+        //YouTube; Erasty
         const links = db.get(`UptimeLink_${interaction.user.id}`).map(map => `<:Link:1046776084965900308> **Link:** ${map}`).join("\n")
 
         const LinkListe = new EmbedBuilder()
             .setTitle(`Sistemdeki projelerin`)
             .setDescription(`${links || "Sisteme eklenmiş bir proje yok."}`)
             .setFooter({ text: "Uptime linkler" })
-            .setColor("Blurple")
+            .setColor("Blurple")//YouTube; Erasty
 
         interaction.reply({
             embeds: [LinkListe],
             ephemeral: true
         }).catch(e => { })
-
+//YouTube; Erasty
     }
 })
 //=====// LinkListeSistemi \\=====\\
@@ -462,14 +462,14 @@ setInterval(() => {
     }
   });
   console.log("Uptime başarılı")
-}, 120000);
+}, 120000);//YouTube; Erasty
 //=====// UptimeEtme \\=====\\
 
 //=====// Seste Tutma \\=====\\
 const { joinVoiceChannel } = require('@discordjs/voice')
 client.on('ready', () => {
   let channel = client.channels.cache.get("1125081070937853952")
- 
+ //YouTube; Erasty
 
       const VoiceConnection = joinVoiceChannel({
           channelId: channel.id,
@@ -479,3 +479,5 @@ client.on('ready', () => {
 })
 //=====// Seste Tutma \\=====\\
 
+//YouTube; Erasty
+//ANLATIMLI VİDEO https://www.youtube.com/watch?v=_WQjR6OniZY&t
