@@ -40,7 +40,7 @@ module.exports = (client) => {
   console.log(`Tüm Komutlar Yüklendi`)
 }
 
-const rest = new REST({ version: '10' }).setToken(token)
+const rest = new REST({ version: '10' }).setToken(process.env.token)
 
 setTimeout(async () => {
   rest.put(Routes.applicationCommands(botid), { body: commands }).catch(console.error)
