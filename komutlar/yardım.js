@@ -18,8 +18,8 @@ module.exports = {
        
       const Yardım = new EmbedBuilder()
          .setColor("Blurple")
-         .setImage("https://cdn.discordapp.com/attachments/1112827440608313434/1114992699351765072/1685905337921_jxqx55_2_1.jpg")
-         .setTitle("Erasty Uptime • Yardım menüsü")
+         .setImage("https://cdn.discordapp.com/attachments/1094660152671604766/1167780098099925034/Isimsiz_video_Clipchamp_ile_yapld_2.gif?ex=654f5ef7&is=653ce9f7&hm=5facb5d6c895f3ba9ca1e19ea09b4243fb218e69c732a63c9fde29358b1c486a&")
+         .setTitle("Snaeky Uptime • Yardım menüsü")
          .setDescription(`
 </yardım:0> Yardım menüsünü gösterir.
 

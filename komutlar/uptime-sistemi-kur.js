@@ -26,14 +26,14 @@ module.exports = {
           
         const SistemAçıldı = new EmbedBuilder()
              .setColor("Green")
-             .setDescription(`<:Yes:1122994864049619127> Uptime kanalı başarıyla <#${kanal.id}> olarak ayarlandı.`)
+             .setDescription(`<✅️> Uptime kanalı başarıyla <#${kanal.id}> olarak ayarlandı.`)
         interaction.reply({embeds: [SistemAçıldı]})
         
         const SistemMesajı = new EmbedBuilder()
              .setColor("Blue")
-             .setImage("https://cdn.discordapp.com/attachments/1112643961392209981/1132472847386816552/Picsart_23-07-23_03-42-28-909.png")
-             .setDescription("**Erasty Uptime** \n")
-.addFields({name: "<:Poltika:1132425331589009419> | Gizlilik ve Güvenlik politikamızı destek sunucumuzdan görebilirsin!", value: "\n <:Ekle:1132419170596831232> | Link eklemek için: **Ekle** \n <:Sil:1132424813705711747> | Linkinizi silmek için: **Sil** \n <:Liste:1132425047731085333> | Linklerinizi görmek için: **Liste** \n <:Help:1132425356184387634> | Aradığınızı bulamadıysanız veya öneriniz varsa sizi destek sunucumuza bekleriz. \n "},)
+             .setImage("https://cdn.discordapp.com/attachments/1094660152671604766/1167680262562381824/Adsz.png?ex=654f01fd&is=653c8cfd&hm=1bc3fd288357f45ac826bbaf2d72673e221db1b6af0a0af44021bb6ded0f7c74&")
+             .setDescription("**Snaeky** \n")
+.addFields({name: "<🛡️> | Gizlilik ve Güvenlik politikamızı destek sunucumuzdan görebilirsin!", value: "\n <✅> | Link eklemek için: **Ekle** \n <❌> | Linkinizi silmek için: **Sil** \n <📎> | Linklerinizi görmek için: **Liste** \n <:Help:> | Aradığınızı bulamadıysanız veya öneriniz varsa sizi destek sunucumuza bekleriz. \n "},)
         
         .setFooter({text: client.user.username, iconURL: client.user.avatarURL()}) 
      
@@ -55,7 +55,7 @@ module.exports = {
            .setCustomId("listebuton"),
            new Discord.ButtonBuilder()  
         .setEmoji("<:YouTube:1112804009414242324>")
-       .setURL(`https://www.youtube.com/watch?v=_WQjR6OniZY`)
+       .setURL(`https://www.youtube.com/@SnaekyFOX`)
         .setLabel(`Video`)
         .setStyle("Link"))
         

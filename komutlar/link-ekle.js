@@ -100,7 +100,7 @@ const ProjeEklenmemiş = new EmbedBuilder()
             return interaction.reply({embeds: [BaşıHatalı]}).catch(e => { })
         }
 
-        if (!link.endsWith(".glitch.me")) {
+        if (!link.endsWith(".repl.co")) {
             return interaction.reply({embeds: [SonuHatalı]}).catch(e => { })
         }
       //if(!PremiumÜye) {
