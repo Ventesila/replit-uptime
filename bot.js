@@ -39,7 +39,7 @@ const BaşıHatalı = new EmbedBuilder()
 const SonuHatalı = new EmbedBuilder()
     .setColor("Red")
     .setTitle("Hata")
-    .setDescription(`<:No:1122993152064765973> **Yalnızca glitch projeleri aktif tutulmaktdır, linkin sonunda \`.glitch.me\` olduğundan emin ol.**`)
+    .setDescription(`<:No:1122993152064765973> **Yalnızca Replit projeleri aktif tutulmaktdır, linkin sonunda \`.repl.co\` olduğundan emin ol.**`)
     
 const LinkEklendi = new EmbedBuilder()
     .setColor("Green")
@@ -77,7 +77,7 @@ const LinkEkleFormu = new TextInputBuilder()
     .setStyle(TextInputStyle.Paragraph)
     .setMinLength(20)
     .setMaxLength(100)
-    .setPlaceholder('https://erasty-uptime.glitch.me')
+    .setPlaceholder('https://uptime.repl.co')
     .setRequired(true)
 const LinkEklemeSistemi = new ActionRowBuilder().addComponents(LinkEkleFormu);
 LinkEklemeFormu.addComponents(LinkEklemeSistemi);
@@ -93,7 +93,7 @@ const LinkSilFormu = new TextInputBuilder()
     .setStyle(TextInputStyle.Paragraph)
     .setMinLength(20)
     .setMaxLength(100)
-    .setPlaceholder('https://erasty-uptime.glitch.me')
+    .setPlaceholder('https://uptime.repl.co')
     .setRequired(true)
 const LinkSilmeSistemi = new ActionRowBuilder().addComponents(LinkSilFormu);
 LinkSilmeFormu.addComponents(LinkSilmeSistemi); 
@@ -109,7 +109,7 @@ const SilFormu = new TextInputBuilder()
     .setStyle(TextInputStyle.Paragraph)
     .setMinLength(20)
     .setMaxLength(100)
-    .setPlaceholder('https://proje-linki.glitch.me')
+    .setPlaceholder('https://proje-linki.repl.co')
     .setRequired(true)
 const SilmeSistemi = new ActionRowBuilder().addComponents(SilFormu);
 SilmeFormu.addComponents(SilmeSistemi); 
@@ -287,7 +287,7 @@ client.on('interactionCreate', async interaction => {
             return interaction.reply({embeds: [BaşıHatalı], ephemeral: true}).catch(e => { })
         }
 
-        if (!link.endsWith(".glitch.me")) {
+        if (!link.endsWith(".repl.co")) {
             return interaction.reply({embeds: [SonuHatalı], ephemeral: true}).catch(e => { })
         }
       
